@@ -1,0 +1,23 @@
+/* ///////////     RESET      ///////////// */
+
+*, *:before, *:after {margin: 0;padding: 0;box-sizing: border-box;outline: none;border: none;background-size: cover;background-position: center;background-repeat: no-repeat;object-fit: cover;}::-webkit-scrollbar {width: 0;}html {font-size: 62.5%;scroll-behavior: smooth;}a {text-decoration: none;color: inherit;}li {list-style: none;}img {display: block;max-width: 100%;height: auto;}
+
+/* ///////////     END-RESET      ///////////// */
+
+
+h2 {
+    width: 250px;
+    height: 100vh;
+    float: left;
+    text-align: center;
+    background-color: green;
+    z-index: ;
+}
+
+h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    background-color: orange;
+}
