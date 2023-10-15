@@ -1,2 +1,6 @@
-@import "../parts/reset";
-@import "../parts/base";
+@import "./parts/reset";
+@import "./parts/base";
+@import "./parts/variables";
+
+// Layout
+@import "./layouts/header";

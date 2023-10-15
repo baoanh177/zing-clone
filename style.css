@@ -86,8 +86,6 @@ video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
-  font: inherit;
   vertical-align: baseline;
 }
 
@@ -131,6 +129,154 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+input,
+button {
+  outline: none;
+  border: none;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 59px;
+  height: 70px;
+  color: rgba(216, 216, 216, 0.8666666667);
+  background-color: #170f23;
+}
+
+.left-header {
+  display: flex;
+  align-items: center;
+}
+.left-header .actions {
+  display: flex;
+  gap: 20px;
+  font-size: 2.4rem;
+}
+.left-header .search-box {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+  padding-right: 10px;
+  width: 440px;
+  height: 40px;
+  overflow: hidden;
+  border: 1px solid #000;
+  border-radius: 20px;
+  color: #eee;
+  background-color: hsla(0, 0%, 100%, 0.1);
+}
+.left-header .search-box .search-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  width: 38px;
+  height: 38px;
+  cursor: pointer;
+}
+.left-header .search-box input {
+  height: 100%;
+  width: 100%;
+  padding: 5px;
+  background-color: transparent;
+  caret-color: #fff;
+}
+.left-header .search-box input::placeholder {
+  color: #eee;
+  font-weight: 400;
+}
+
+.right-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.right-header .install-pc-version {
+  display: flex;
+  align-items: center;
+  padding: 10px 24px;
+  border-radius: 99px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #c273ed;
+  background-color: hsla(0, 0%, 100%, 0.1);
+}
+.right-header .install-pc-version svg {
+  margin-right: 4px;
+}
+.right-header .install-pc-version:hover {
+  cursor: pointer;
+  color: #9b4de0;
+}
+.right-header .setting-outer {
+  position: relative;
+}
+.right-header .setting-outer:hover .setting-tooltips {
+  display: block;
+}
+.right-header .setting-outer .setting {
+  font-size: 1.8rem;
+  padding: 5px;
+  background-color: hsla(0, 0%, 100%, 0.1);
+}
+.right-header .setting-outer .setting-tooltips {
+  position: absolute;
+  font-size: 12px;
+  top: 125%;
+  width: 50px;
+  left: 50%;
+  translate: -50%;
+  padding: 6px 4px;
+  border-radius: 4px;
+  color: #fff;
+  background-color: #32323d;
+  display: none;
+}
+.right-header .setting-outer .setting-tooltips::before {
+  content: "";
+  content: "";
+  position: absolute;
+  top: -67%;
+  left: 50%;
+  transform: translateX(-50%);
+  transform: rotate(180deg);
+  border-style: solid;
+  translate: -50%;
+  border-width: 8px 8px;
+  border-color: #32323d transparent transparent;
+}
+.right-header .header-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  height: 38px;
+  width: 38px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.right-header .header-btn:hover {
+  opacity: 0.8;
+}
+.right-header .header-btn img {
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */
