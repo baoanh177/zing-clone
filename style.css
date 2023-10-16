@@ -137,6 +137,11 @@ button {
   border: none;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
@@ -144,16 +149,118 @@ html {
 
 body {
   font-family: "Inter", sans-serif;
+  font-weight: 400;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 * {
   box-sizing: border-box;
 }
 
+.active {
+  border-left: 2.4px solid #9b4de0 !important;
+  background-color: hsla(0, 0%, 100%, 0.1);
+}
+
+.sidebar {
+  background-color: #170f23;
+  height: 100vh;
+}
+.sidebar .sidebar-inner {
+  position: relative;
+  width: 240px;
+  height: 100%;
+  background-color: hsla(0, 0%, 100%, 0.05);
+  font-weight: 500;
+  color: #ddd;
+  font-size: 1.4rem;
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  padding: 0 25px 0 28px;
+  height: 70px;
+}
+.sidebar-item .zing-logo {
+  height: 45px;
+}
+.sidebar-item .zing-logo img {
+  width: 120px;
+  height: 40px;
+}
+
+.navbar-main {
+  position: relative;
+  padding-bottom: 16px;
+}
+.navbar-main:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 25px;
+  right: 25px;
+  bottom: 0;
+  border: 1px solid hsla(0, 0%, 100%, 0.1);
+}
+.navbar-main .item {
+  padding: 12px 21px;
+  border-left: 2.4px solid transparent;
+  cursor: pointer;
+}
+.navbar-main .item:hover {
+  color: #fff;
+}
+.navbar-main .item:hover .play-icon {
+  display: block;
+}
+.navbar-main .item a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.navbar-main .item a .play-icon {
+  display: none;
+  margin-left: auto;
+  font-size: 1.8rem;
+}
+.navbar-main .item a .play-icon:hover {
+  color: #ddd;
+}
+
+.navbar-sub {
+  overflow: hidden;
+}
+
+.create-playlist-btn {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  gap: 12px;
+  height: 54px;
+  padding: 0 24px;
+  border-top: 1px solid hsla(0, 0%, 100%, 0.1);
+  background-color: #170f23;
+}
+.create-playlist-btn i {
+  font-size: 1.6rem;
+}
+
+.wrapper {
+  display: flex;
+}
+
 .header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  flex-grow: 1;
   padding: 0 59px;
   height: 70px;
   color: rgba(216, 216, 216, 0.8666666667);
@@ -166,13 +273,14 @@ body {
 }
 .left-header .actions {
   display: flex;
-  gap: 20px;
-  font-size: 2.4rem;
+  font-size: 2.2rem;
+}
+.left-header .actions i {
+  width: 44px;
 }
 .left-header .search-box {
   display: flex;
   align-items: center;
-  margin-left: 20px;
   padding-right: 10px;
   width: 440px;
   height: 40px;
@@ -186,7 +294,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2rem;
+  font-size: 1.8rem;
   width: 38px;
   height: 38px;
   cursor: pointer;
@@ -195,8 +303,9 @@ body {
   height: 100%;
   width: 100%;
   padding: 5px;
+  font-size: 1.4rem;
+  color: #fff;
   background-color: transparent;
-  caret-color: #fff;
 }
 .left-header .search-box input::placeholder {
   color: #eee;
@@ -264,8 +373,8 @@ body {
 }
 .right-header .header-btn {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   border-radius: 50%;
   height: 38px;
   width: 38px;
