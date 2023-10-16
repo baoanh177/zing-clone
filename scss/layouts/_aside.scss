@@ -1,3 +1,30 @@
+@mixin item-style() {
+    .item {
+        padding: 12px 21px;
+        border-left: 2.4px solid transparent;
+        cursor: pointer;
+        &:hover {
+            color: #fff;
+            .play-icon {
+                display: block;
+            }
+        }
+        a {
+            @include center(cross);
+            gap: 12px;
+            .play-icon {
+                display: none;
+                margin-left: auto;
+                font-size: 1.8rem;
+                &:hover {
+                    color: #ddd;
+                }
+            }
+        }
+    }
+}
+
+
 .active {
     border-left: 2.4px solid $purple-primary !important;
     background-color: $alpha-bg;
@@ -7,7 +34,8 @@
     background-color: $layout-background;
     height: 100vh;
     .sidebar-inner {
-        position: relative;
+        display: flex;
+        flex-direction: column;
         width: 240px;
         height: 100%;
         background-color: $sidebar-bg;
@@ -42,41 +70,46 @@
         bottom: 0;
         border: 1px solid $border-primary;
     }
-    .item {
-        padding: 12px 21px;
-        border-left: 2.4px solid transparent;
-        cursor: pointer;
-        &:hover {
-            color: #fff;
-            .play-icon {
-                display: block;
-            }
-        }
-        a {
-            @include center(cross);
-            gap: 12px;
-            .play-icon {
-                display: none;
-                margin-left: auto;
-                font-size: 1.8rem;
-                &:hover {
-                    color: #ddd;
-                }
-            }
-        }
-    }
+    @include item-style();
 }
 
 .navbar-sub {
     overflow: hidden;
+    flex-grow: 1;
+    background-color: lightblue;
+    .scroll-menu {
+        .menu {
+            @include item-style();
+        }
+    }
+}
+
+.vip-sidebar-banner {
+    text-align: center;
+    // height: auto;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 16px 20px 0;
+    padding: 15px 8px;
+    border-radius: 8px;
+    color: #fff;
+    background-image: linear-gradient(117deg,#5a4be7,#c86dd7 102%);
+    .title {
+        line-height: 1.67;
+    }
+    .vip-register {
+        margin-top: 10px;
+        color: #000;
+        text-transform: uppercase;
+        padding: 6px 16px;
+        border-radius: 99px;
+        border: 0.8px solid #ffdb00;
+        background-color: #ffdb00
+    }
 }
 
 .create-playlist-btn {
     @include center(cross);
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
     gap: 12px;
     height: 54px;
     padding: 0 24px;

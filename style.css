@@ -170,7 +170,8 @@ body::-webkit-scrollbar {
   height: 100vh;
 }
 .sidebar .sidebar-inner {
-  position: relative;
+  display: flex;
+  flex-direction: column;
   width: 240px;
   height: 100%;
   background-color: hsla(0, 0%, 100%, 0.05);
@@ -233,15 +234,60 @@ body::-webkit-scrollbar {
 
 .navbar-sub {
   overflow: hidden;
+  flex-grow: 1;
+  background-color: lightblue;
+}
+.navbar-sub .scroll-menu .menu .item {
+  padding: 12px 21px;
+  border-left: 2.4px solid transparent;
+  cursor: pointer;
+}
+.navbar-sub .scroll-menu .menu .item:hover {
+  color: #fff;
+}
+.navbar-sub .scroll-menu .menu .item:hover .play-icon {
+  display: block;
+}
+.navbar-sub .scroll-menu .menu .item a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.navbar-sub .scroll-menu .menu .item a .play-icon {
+  display: none;
+  margin-left: auto;
+  font-size: 1.8rem;
+}
+.navbar-sub .scroll-menu .menu .item a .play-icon:hover {
+  color: #ddd;
+}
+
+.vip-sidebar-banner {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 16px 20px 0;
+  padding: 15px 8px;
+  border-radius: 8px;
+  color: #fff;
+  background-image: linear-gradient(117deg, #5a4be7, #c86dd7 102%);
+}
+.vip-sidebar-banner .title {
+  line-height: 1.67;
+}
+.vip-sidebar-banner .vip-register {
+  margin-top: 10px;
+  color: #000;
+  text-transform: uppercase;
+  padding: 6px 16px;
+  border-radius: 99px;
+  border: 0.8px solid #ffdb00;
+  background-color: #ffdb00;
 }
 
 .create-playlist-btn {
   display: flex;
   align-items: center;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
   gap: 12px;
   height: 54px;
   padding: 0 24px;
