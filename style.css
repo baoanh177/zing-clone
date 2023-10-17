@@ -345,6 +345,7 @@ body::-webkit-scrollbar {
   display: flex;
   display: flex;
   align-items: center;
+  position: absolute;
   left: 0;
   right: 0;
   bottom: 90px;
@@ -363,14 +364,6 @@ body::-webkit-scrollbar {
 
 .wrapper {
   margin-left: 240px;
-}
-
-main {
-  background-color: lightcoral;
-  width: 100%;
-  padding: 0 59px;
-  background-clip: content-box;
-  height: calc(100vh - 70px);
 }
 
 .header {
@@ -508,15 +501,11 @@ main {
   width: 100%;
 }
 
-
 .main {
-  flex-grow: 1;
-  width: calc(100% - 570px);
   background-color: #170f23;
 }
 .main .home-page-content {
   position: relative;
-  min-height: calc(100% - 158px);
   margin-top: 70px;
 }
 
@@ -571,6 +560,7 @@ main {
 .home-page-content .container .gallery .gallery-container:hover [class$=-gallery] {
   opacity: 1;
   visibility: visible;
+}
 
 .player-model {
   position: fixed;
