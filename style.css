@@ -287,6 +287,9 @@ body::-webkit-scrollbar {
   border: 0.8px solid #ffdb00;
   background-color: #ffdb00;
 }
+.vip-sidebar-banner .vip-register:hover {
+  opacity: 0.9;
+}
 
 .create-playlist-btn {
   display: flex;

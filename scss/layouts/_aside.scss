@@ -105,6 +105,9 @@
         border-radius: 99px;
         border: 0.8px solid #ffdb00;
         background-color: #ffdb00;
+        &:hover {
+            opacity: 0.9;
+        }
     }
 }
 
