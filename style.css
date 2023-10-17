@@ -187,6 +187,7 @@ body::-webkit-scrollbar {
   background-color: #170f23;
 }
 .sidebar .sidebar-inner {
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 240px;
@@ -213,6 +214,7 @@ body::-webkit-scrollbar {
 .navbar-main {
   position: relative;
   margin-bottom: 16px;
+  padding-bottom: 16px;
 }
 .navbar-main:after {
   content: "";
@@ -254,8 +256,8 @@ body::-webkit-scrollbar {
 .navbar-sub .scroll-menu {
   position: relative;
   overflow: auto;
-  height: 292px;
-  padding-bottom: 30px;
+  height: 278px;
+  padding-bottom: 16px;
   -webkit-mask-image: linear-gradient(180deg, hsla(0, 0%, 100%, 0), hsla(0, 0%, 100%, 0.8) 10%, #fff 25%, #fff);
 }
 .navbar-sub .scroll-menu .menu .item {
@@ -338,10 +340,10 @@ body::-webkit-scrollbar {
 }
 
 .create-playlist-btn {
-  position: fixed;
+  position: absolute;
   display: flex;
   align-items: center;
-  position: absolute;
+  top: 100%;
   left: 0;
   right: 0;
   bottom: 90px;
@@ -698,13 +700,6 @@ body::-webkit-scrollbar {
 }
 .player-actions .show-playlist svg {
   fill: currentColor;
-}
-
-.main {
-  background-color: #170f23;
-  margin-left: 240px;
-  margin-top: 70px;
-  padding: 0px 59px;
 }
 
 .gallery {
