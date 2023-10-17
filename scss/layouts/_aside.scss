@@ -45,6 +45,7 @@
     bottom: 0;
     background-color: $layout-background;
     .sidebar-inner {
+        position: relative;
         display: flex;
         flex-direction: column;
         width: $sidebar-width;
@@ -72,6 +73,7 @@
 .navbar-main {
     position: relative;
     margin-bottom: 16px;
+    padding-bottom: 16px;
     &:after {
         content: "";
         display: block;
@@ -90,8 +92,8 @@
     .scroll-menu {
         position: relative;
         overflow: auto;
-        height: 292px;
-        padding-bottom: 30px;
+        height: 278px;
+        padding-bottom: 16px;
         -webkit-mask-image: linear-gradient(
             180deg,
             hsla(0, 0%, 100%, 0),
