@@ -1,0 +1,14 @@
+// Flex-Center
+@mixin center($direction) {
+    @if($direction == cross) {
+        display: flex;
+        align-items: center;
+    }@else if($direction == main) {
+        display: flex;
+        justify-content: center;
+    }@else if($direction == all) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

@@ -1,0 +1,128 @@
+.wrapper {
+    display: flex;
+}
+
+.header {
+  @include center(cross);
+    justify-content: space-between;
+    flex-grow: 1;
+    padding: 0 59px;
+    height: $header-height;
+    color: #d8d8d8dd;
+    background-color: $layout-background;
+}
+
+.left-header {
+    @include center(cross);
+    .actions {
+        display: flex;
+        font-size: 2.2rem;
+        i {
+            width: 44px;
+        }
+    }
+    .search-box {
+        @include center(cross);
+        padding-right: 10px;
+        width: 440px;
+        height: 40px;
+        overflow: hidden;
+        border: 1px solid #000;
+        border-radius: 20px;
+        color: #eee;
+        background-color: hsla(0, 0%, 100%, 0.1);
+        .search-icon {
+            @include center(all);
+            font-size: 1.8rem;
+            width: 38px;
+            height: 38px;
+            cursor: pointer;
+        }
+        input {
+            height: 100%;
+            width: 100%;
+            padding: 5px;
+            font-size: 1.4rem;
+            color: #fff;
+            background-color: transparent;
+            &::placeholder {
+                color: #eee;
+                font-weight: 400;
+            }
+        }
+    }
+}
+
+.right-header {
+    @include center(cross);
+    gap: 10px;
+    .install-pc-version {
+        @include center(cross);
+        padding: 10px 24px;
+        border-radius: 99px;
+        font-size: 1.4rem;
+        font-weight: 600;
+        color: $link-text-hover;
+        background-color: hsla(0, 0%, 100%, 0.1);
+        svg {
+            margin-right: 4px;
+        }
+        &:hover {
+            cursor: pointer;
+            color: $purple-primary;
+        }
+    }
+    .setting-outer {
+        position: relative;
+        &:hover {
+            .setting-tooltips {
+                display: block;
+            }
+        }
+        .setting {
+            font-size: 1.8rem;
+            padding: 5px;
+            background-color: hsla(0, 0%, 100%, 0.1);
+        }
+        .setting-tooltips {
+            position: absolute;
+            font-size: 12px;
+            top: 125%;
+            width: 50px;
+            left: 50%;
+            translate: -50%;
+            padding: 6px 4px;
+            border-radius: 4px;
+            color: #fff;
+            background-color: #32323d;
+            display: none;
+            &::before {
+                content: "";
+                content: "";
+                position: absolute;
+                top: -67%;
+                left: 50%;
+                transform: translateX(-50%);
+                transform: rotate(180deg);
+                border-style: solid;
+                translate: -50%;
+                border-width: 8px 8px;
+                border-color: #32323d transparent transparent;
+            }
+        }
+    }
+    .header-btn {
+        @include center(all);
+        border-radius: 50%;
+        height: 38px;
+        width: 38px;
+        overflow: hidden;
+        cursor: pointer;
+        &:hover {
+            opacity: 0.8;
+        }
+        img {
+            width: 100%;
+        }
+    }
+}
