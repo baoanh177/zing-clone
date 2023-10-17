@@ -1,10 +1,7 @@
 .main {
-    flex-grow: 1;
-    width: calc(100% - 570px);
     background-color: $layout-background;
     .home-page-content {
         position: relative;
-        min-height: calc(100% - 158px);
-        margin-top: 70px;
+        margin-top: $header-height;
     }
 }

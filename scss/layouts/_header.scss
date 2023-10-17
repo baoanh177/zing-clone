@@ -2,14 +2,6 @@
     margin-left: $sidebar-width;
 }
 
-main {
-    background-color: lightcoral;
-    width: 100%;
-    padding: 0 $content-paddingX;
-    background-clip: content-box;
-    height: calc(100vh - $header-height); // Test xóa sau
-}
-
 .header {
     @include center(cross);
     justify-content: space-between;
