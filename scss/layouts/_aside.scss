@@ -49,6 +49,7 @@
         display: flex;
         flex-direction: column;
         width: $sidebar-width;
+        height: 100%;
         background-color: $sidebar-bg;
         font-weight: 500;
         color: #ddd;
@@ -86,6 +87,7 @@
 }
 
 .navbar-sub {
+    overflow: auto;
     flex-grow: 1;
     .scroll-menu {
         position: relative;
@@ -137,9 +139,9 @@
 }
 
 .create-playlist-btn {
-    position: absolute;
     @include center(cross);
-    top: 100%;
+    position: fixed;
+    display: flex;
     left: 0;
     right: 0;
     bottom: $player-model-height;
@@ -147,9 +149,9 @@
     height: $create-playlist-btn-height;
     width: 240px;
     padding: 0 24px;
+    cursor: pointer;
     border-top: 1px solid $border-primary;
     background-color: $layout-background;
-    cursor: pointer;
     i {
         font-size: 1.6rem;
     }

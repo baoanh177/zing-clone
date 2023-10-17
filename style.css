@@ -191,6 +191,7 @@ body::-webkit-scrollbar {
   display: flex;
   flex-direction: column;
   width: 240px;
+  height: 100%;
   background-color: hsla(0, 0%, 100%, 0.05);
   font-weight: 500;
   color: #ddd;
@@ -251,6 +252,7 @@ body::-webkit-scrollbar {
 }
 
 .navbar-sub {
+  overflow: auto;
   flex-grow: 1;
 }
 .navbar-sub .scroll-menu {
@@ -340,10 +342,10 @@ body::-webkit-scrollbar {
 }
 
 .create-playlist-btn {
-  position: absolute;
   display: flex;
   align-items: center;
-  top: 100%;
+  position: fixed;
+  display: flex;
   left: 0;
   right: 0;
   bottom: 90px;
@@ -351,9 +353,9 @@ body::-webkit-scrollbar {
   height: 54px;
   width: 240px;
   padding: 0 24px;
+  cursor: pointer;
   border-top: 1px solid hsla(0, 0%, 100%, 0.1);
   background-color: #170f23;
-  cursor: pointer;
 }
 .create-playlist-btn i {
   font-size: 1.6rem;
@@ -702,6 +704,11 @@ body::-webkit-scrollbar {
   fill: currentColor;
 }
 
+.main {
+  background-color: #170f23;
+  margin-top: 70px;
+  padding: 0px 59px;
+}
 .gallery {
   position: relative;
   padding-top: 32px;
