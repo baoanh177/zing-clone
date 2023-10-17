@@ -381,6 +381,10 @@ main {
   height: 70px;
   color: rgba(216, 216, 216, 0.8666666667);
   background-color: #170f23;
+  position: fixed;
+  top: 0px;
+  left: 15.625%;
+  right: 0px;
 }
 
 .left-header {
@@ -503,6 +507,70 @@ main {
 .right-header .header-btn img {
   width: 100%;
 }
+
+
+.main {
+  flex-grow: 1;
+  width: calc(100% - 570px);
+  background-color: #170f23;
+}
+.main .home-page-content {
+  position: relative;
+  min-height: calc(100% - 158px);
+  margin-top: 70px;
+}
+
+.home-page-content .container {
+  padding: 0px 59px;
+  margin: 0px auto;
+}
+.home-page-content .container .gallery {
+  padding-top: 32px;
+  overflow: hidden;
+}
+.home-page-content .container .gallery .gallery-container {
+  display: flex;
+  align-items: center;
+  height: 209.663px;
+  gap: 30px;
+}
+.home-page-content .container .gallery .gallery-container .gallery-item {
+  flex-basis: calc((100% - 60px) / 3);
+  min-width: calc((100% - 60px) / 3);
+  height: 100%;
+}
+.home-page-content .container .gallery .gallery-container .gallery-item img {
+  border-radius: 8px;
+}
+.home-page-content .container .gallery .gallery-container [class$=-gallery] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  position: absolute;
+  font-size: 30.72px;
+  color: #fff;
+  background-color: hsla(0, 0%, 100%, 0.15);
+  box-shadow: 0 2px 4px 0 rgba(226, 102, 102, 0.15);
+  opacity: 0;
+  visibility: hidden;
+  transition-property: visibility, opacity;
+  transition-duration: 0.4s;
+  transition-timing-function: ease-in;
+}
+.home-page-content .container .gallery .gallery-container [class$=-gallery].next-gallery {
+  right: 10px;
+  translate: -100% 0;
+}
+.home-page-content .container .gallery .gallery-container [class$=-gallery].prev-gallery {
+  translate: 100%;
+  left: 10px;
+}
+.home-page-content .container .gallery .gallery-container:hover [class$=-gallery] {
+  opacity: 1;
+  visibility: visible;
 
 .player-model {
   position: fixed;
