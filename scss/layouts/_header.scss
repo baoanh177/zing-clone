@@ -10,6 +10,10 @@
     height: $header-height;
     color: #d8d8d8dd;
     background-color: $layout-background;
+    position: fixed;
+    top: 0px;
+    left: 15.625%;
+    right: 0px;
 }
 
 .left-header {
