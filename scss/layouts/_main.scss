@@ -1,7 +1,6 @@
 .main {
     background-color: $layout-background;
-    .home-page-content {
-        position: relative;
-        margin-top: $header-height;
-    }
+    margin-left: $sidebar-width;
+    margin-top: $header-height;
+    padding: 0px $content-paddingX;
 }

@@ -1,52 +1,47 @@
-.home-page-content {
-    .container {
-        padding: 0px $content-paddingX;
-        margin: 0px auto;
-        .gallery {
-            padding-top: 32px;
-            overflow: hidden;
-            .gallery-container {
-                @include center(cross);
-                height: 209.663px;
-                gap: 30px;
-                .gallery-item {
-                    flex-basis: calc((100% - 30px * 2) / 3);
-                    min-width: calc((100% - 30px * 2) / 3);
-                    height: 100%;
-                    img {
-                        border-radius: 8px;
-                    }
-                }
-                [#{'class$="-gallery"'}] {
-                    @include center(all);
-                    border-radius: 50%;
-                    width: 55px;
-                    height: 55px;
-                    position: absolute;
-                    font-size: 30.72px;
-                    color: #fff;
-                    background-color: hsla(0,0%,100%,.15);
-                    box-shadow: 0 2px 4px 0 rgba(226,102,102,.15);
-                    opacity: 0;
-                    visibility: hidden;
-                    transition-property: visibility, opacity;
-                    transition-duration: .4s;
-                    transition-timing-function: ease-in;
-                    &.next-gallery {
-                        right: 10px;
-                        translate: -100% 0;
-                    }
-                    &.prev-gallery {
-                        translate: 100%;
-                        left: 10px;
-                    }
-                }
-                &:hover {
-                    [#{'class$="-gallery"'}] {
-                        opacity: 1;
-                        visibility: visible;
-                    }
-                }
+.gallery {
+    position: relative;
+    padding-top: 32px;
+    overflow: hidden;
+    .gallery-container {
+        @include center(cross);
+        height: 209.663px;
+        gap: 30px;
+        .gallery-item {
+            flex-basis: calc((100% - 30px * 2) / 3);
+            min-width: calc((100% - 30px * 2) / 3);
+            height: 100%;
+            img {
+                border-radius: 8px;
+            }
+        }
+        [#{'class$="-gallery"'}] {
+            @include center(all);
+            position: absolute;
+            border-radius: 50%;
+            width: 55px;
+            height: 55px;
+            font-size: 30.72px;
+            color: #fff;
+            background-color: hsla(0, 0%, 100%, 0.15);
+            box-shadow: 0 2px 4px 0 rgba(226, 102, 102, 0.15);
+            opacity: 0;
+            visibility: hidden;
+            transition: visibility 0.2s, opacity 0.2s;
+            &:hover {
+                filter: brightness(.9);
+                cursor: pointer;
+            }
+            &.next-gallery {
+                right: 10px;
+            }
+            &.prev-gallery {
+                left: 10px;
+            }
+        }
+        &:hover {
+            [#{'class$="-gallery"'}] {
+                opacity: 1;
+                visibility: visible;
             }
         }
     }
