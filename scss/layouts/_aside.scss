@@ -30,12 +30,15 @@
 }
 
 .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
     background-color: $layout-background;
-    height: 100vh;
     .sidebar-inner {
         display: flex;
         flex-direction: column;
-        width: 240px;
+        width: $sidebar-width;
         height: 100%;
         background-color: $sidebar-bg;
         font-weight: 500;
@@ -85,7 +88,6 @@
 
 .vip-sidebar-banner {
     text-align: center;
-    // height: auto;
     font-size: 1.2rem;
     font-weight: 600;
     margin: 16px 20px 0;
@@ -113,11 +115,16 @@
 
 .create-playlist-btn {
     @include center(cross);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: $player-model-height;
     gap: 12px;
     height: 54px;
     padding: 0 24px;
     border-top: 1px solid $border-primary;
     background-color: $layout-background;
+    cursor: pointer;
     i {
         font-size: 1.6rem;
     }
