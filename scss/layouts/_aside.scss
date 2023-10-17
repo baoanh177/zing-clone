@@ -24,6 +24,19 @@
     }
 }
 
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background-color: hsla(0, 0%, 100%, 0.3);
+}
+
+::-webkit-scrollbar-button {
+    height: 54px;
+}
+
 .active {
     border-left: 2.4px solid $purple-primary !important;
     background-color: $alpha-bg;
@@ -76,12 +89,17 @@
 }
 
 .navbar-sub {
-    overflow: hidden;
+    overflow: auto;
     flex-grow: 1;
     .scroll-menu {
         padding-top: 16px;
         .menu {
             @include item-style();
+        }
+        .library-personal {
+            @include item-style();
+            padding-top: 16px;
+            padding-bottom: 64px;
         }
     }
 }
@@ -114,6 +132,8 @@
 }
 
 .create-playlist-btn {
+    position: fixed;
+    display: flex;
     @include center(cross);
     position: absolute;
     left: 0;
@@ -121,7 +141,9 @@
     bottom: $player-model-height;
     gap: 12px;
     height: 54px;
+    width: 240px;
     padding: 0 24px;
+    cursor: pointer;
     border-top: 1px solid $border-primary;
     background-color: $layout-background;
     cursor: pointer;
