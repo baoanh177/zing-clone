@@ -45,6 +45,7 @@
     bottom: 0;
     background-color: $layout-background;
     .sidebar-inner {
+        position: relative;
         display: flex;
         flex-direction: column;
         width: $sidebar-width;
@@ -71,6 +72,7 @@
 .navbar-main {
     position: relative;
     margin-bottom: 16px;
+    padding-bottom: 16px;
     &:after {
         content: "";
         display: block;
@@ -88,8 +90,9 @@
     .scroll-menu {
         position: relative;
         overflow: auto;
-        height: 292px;
-        --webkit-mask-image: linear-gradient(
+        height: 278px;
+        padding-bottom: 16px;
+        -webkit-mask-image: linear-gradient(
             180deg,
             hsla(0, 0%, 100%, 0),
             hsla(0, 0%, 100%, 0.8) 10%,
@@ -134,8 +137,9 @@
 }
 
 .create-playlist-btn {
-    position: fixed;
+    position: absolute;
     @include center(cross);
+    top: 100%;
     left: 0;
     right: 0;
     bottom: $player-model-height;

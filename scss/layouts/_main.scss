@@ -1,5 +1,6 @@
 .main {
     background-color: $layout-background;
+    margin-left: $sidebar-width;
     .home-page-content {
         position: relative;
         margin-top: $header-height;
