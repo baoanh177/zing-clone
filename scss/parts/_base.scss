@@ -1,17 +1,17 @@
 html {
-  font-size: 62.5%;
-  scroll-behavior: smooth;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 body {
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
 }
 
 body::-webkit-scrollbar {
-  display: none;
+    display: none;
 }
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }

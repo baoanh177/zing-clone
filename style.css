@@ -160,6 +160,19 @@ body::-webkit-scrollbar {
   box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 2px;
+  background-color: hsla(0, 0%, 100%, 0.3);
+}
+
+::-webkit-scrollbar-button {
+  height: 54px;
+}
+
 .active {
   border-left: 2.4px solid #9b4de0 !important;
   background-color: hsla(0, 0%, 100%, 0.1);
@@ -233,7 +246,7 @@ body::-webkit-scrollbar {
 }
 
 .navbar-sub {
-  overflow: hidden;
+  overflow: auto;
   flex-grow: 1;
 }
 .navbar-sub .scroll-menu {
@@ -261,6 +274,34 @@ body::-webkit-scrollbar {
   font-size: 1.8rem;
 }
 .navbar-sub .scroll-menu .menu .item a .play-icon:hover {
+  color: #ddd;
+}
+.navbar-sub .scroll-menu .library-personal {
+  padding-top: 16px;
+  padding-bottom: 64px;
+}
+.navbar-sub .scroll-menu .library-personal .item {
+  padding: 12px 21px;
+  border-left: 2.4px solid transparent;
+  cursor: pointer;
+}
+.navbar-sub .scroll-menu .library-personal .item:hover {
+  color: #fff;
+}
+.navbar-sub .scroll-menu .library-personal .item:hover .play-icon {
+  display: block;
+}
+.navbar-sub .scroll-menu .library-personal .item a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.navbar-sub .scroll-menu .library-personal .item a .play-icon {
+  display: none;
+  margin-left: auto;
+  font-size: 1.8rem;
+}
+.navbar-sub .scroll-menu .library-personal .item a .play-icon:hover {
   color: #ddd;
 }
 
@@ -292,11 +333,17 @@ body::-webkit-scrollbar {
 }
 
 .create-playlist-btn {
+  position: fixed;
+  display: flex;
   display: flex;
   align-items: center;
+  left: 0%;
+  bottom: 0%;
   gap: 12px;
   height: 54px;
+  width: 240px;
   padding: 0 24px;
+  cursor: pointer;
   border-top: 1px solid hsla(0, 0%, 100%, 0.1);
   background-color: #170f23;
 }
