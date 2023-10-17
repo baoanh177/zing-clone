@@ -1,0 +1,6 @@
+.recently {
+    margin-top: 48px;
+    .section-title {
+        @include section-title;
+    }
+}

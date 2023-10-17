@@ -16,10 +16,9 @@
         }
         [#{'class$="-gallery"'}] {
             @include center(all);
+            @include equal-sides(55px);
             position: absolute;
             border-radius: 50%;
-            width: 55px;
-            height: 55px;
             font-size: 30.72px;
             color: #fff;
             background-color: hsla(0, 0%, 100%, 0.15);
