@@ -1,12 +1,19 @@
 .wrapper {
-    display: flex;
+    margin-left: $sidebar-width;
+}
+
+main {
+    background-color: lightcoral;
+    width: 100%;
+    padding: 0 $content-paddingX;
+    background-clip: content-box;
+    height: calc(100vh - $header-height); // Test xóa sau
 }
 
 .header {
-  @include center(cross);
+    @include center(cross);
     justify-content: space-between;
-    flex-grow: 1;
-    padding: 0 59px;
+    padding: 0 $content-paddingX;
     height: $header-height;
     color: #d8d8d8dd;
     background-color: $layout-background;

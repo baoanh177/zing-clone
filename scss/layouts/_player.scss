@@ -1,0 +1,191 @@
+.player-model {
+    position: fixed;
+    @include center(cross);
+    justify-content: space-between;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0 20px;
+    height: $player-model-height;
+    border: 1px solid $border-player;
+    background-color: $player-bg;
+    .progress-bar {
+        width: 70px;
+        height: 3px;
+        border-radius: 4px;
+        background-color: $progressbar-player-bg;
+        &:hover {
+            cursor: pointer;
+            height: 5px;
+
+            .progress .dot {
+                opacity: 1;
+            }
+        }
+        .progress {
+            position: relative;
+            width: 50%;
+            height: 100%;
+            border-radius: 4px;
+            background-color: $white;
+            .dot {
+                position: absolute;
+                right: 0;
+                top: 50%;
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+                opacity: 0;
+                transform: translate(50%, -50%);
+                background-color: $white;
+            }
+        }
+    }
+}
+
+.player {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 598px;
+    height: 73px; // Sửa sau
+    .controls {
+        @include center(all);
+        height: 50px;
+        font-size: 1.8rem;
+        > div {
+            @include center(all);
+            width: 29px;
+            height: 29px;
+            margin: 10px;
+            color: $white;
+            fill: $white;
+            border-radius: 50%;
+            cursor: pointer;
+            border-radius: 50%;
+            transition: background-color .2s;
+            &:hover {
+                background-color: hsla(0,0%,100%,.1);
+            }
+        }
+        .play-toggle {
+            width: auto;
+            height: auto;
+            font-size: 40px;
+            &:hover {
+                color: $link-text-hover;
+            }
+        }
+    }
+    .play-inner {
+        @include center(all);
+        gap: 10px;
+        height: 15px;
+        font-size: 1.2rem;
+        font-weight: 500;
+        margin-bottom: 5px;
+        .current-time {
+            color: $white;
+            opacity: 0.5;
+        }
+        .duration-time {
+            color: $white;
+        }
+        .progress-bar {
+            width: 488px;
+        }
+    }
+}
+
+.music-info {
+    @include center(cross);
+    gap: 10px;
+    .music-thumb {
+        width: 64px;
+        height: 64px;
+        border-radius: 4px;
+        overflow: hidden;
+        cursor: pointer;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .info {
+        cursor: pointer;
+        .music-title {
+            font-size: 1.4rem;
+            font-weight: 500;
+            line-height: 1.36;
+            color: $white;
+        }
+        .author-name {
+            font-size: 1.2rem;
+            color: $text-secondary;
+            &:hover {
+                color: $link-text-hover;
+            }
+        }
+    }
+    .music-actions {
+        display: flex;
+        color: $white;
+        font-size: 1.6rem;
+        cursor: pointer;
+    }
+    .icon {
+        font-size: 1.6rem;
+        padding: 8px 10px;
+        border-radius: 50%;
+        transition: background-color .2s;
+        &:hover {
+            background-color: hsla(0,0%,100%,.1);
+        }
+    }
+}
+
+.player-actions {
+    @include center(cross);
+    .volume {
+        @include center(cross);
+        
+    }
+    .divide {
+        width: 1px;
+        height: 33px;
+        margin: 0 20px;
+        background-color: $border-player;
+    }
+    .icon {
+        @include center(all);
+        width: 36px;
+        height: 32px;
+        border-radius: 50%;
+        color: $white;
+        svg {
+            fill: currentColor;
+        }
+        &:hover {
+            background-color: hsla(0,0%,100%,.1);
+            cursor: pointer;
+        }
+    }
+    .show-playlist {
+        @include center(all);
+        width: 27.6px;
+        height: 30px;
+        color: $white;
+        border-radius: 4px;
+        background-color: hsla(0,0%,100%,.1);
+        &:hover {
+            background-color: hsla(0,0%,100%,.2);
+            cursor: pointer;
+        }
+        cursor: pointer;
+        svg {
+            fill: currentColor;
+        }
+    }
+}
