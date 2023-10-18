@@ -1,0 +1,12 @@
+.playlist {
+    margin-top: 48px;
+    .section-title {
+        @include section-title;
+    }
+    .carousel-wrapper {
+        @include carousel-item;
+        .carousel-item {
+            width: 20%;
+        }
+    }
+}
