@@ -903,6 +903,7 @@ body::-webkit-scrollbar {
 }
 .recommend .recommend-inner .recommend-list .recommend-info :nth-of-type(2) a:hover {
   text-decoration: underline;
+}
 
  .new-release {
   margin-top: 48px;
