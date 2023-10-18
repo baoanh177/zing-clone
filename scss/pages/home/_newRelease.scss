@@ -1,0 +1,116 @@
+.new-release {
+    margin-top: 48px;
+    color: $white;
+    .heading {
+        .title {
+            font-size: 2rem;
+            font-weight: 700;
+        }
+        .scope {
+            @include center(cross);
+            gap: 15px;
+            margin-top: 20px;
+            .tab {
+                @include button(md, regular);
+                &.active {
+                    background-color: $purple-primary;
+                    border-color: $purple-primary;
+                    color: $white;
+                }
+            }
+            .see-all {
+                @include center(cross);
+                margin-left: auto;
+                color: $text-secondary;
+                gap: 4px;
+                font-size: 1.2rem;
+                font-weight: 500;
+                text-transform: uppercase;
+                &:hover {
+                    color: $link-text-hover;
+                    cursor: pointer;
+                }
+                i {
+                    font-size: 1.6rem;
+                }
+            }
+        }
+    }
+
+    .list-music {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin-top: 16px;
+        gap: 0 24px;
+        .music-item {
+            @include center(cross);
+            gap: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            &:hover {
+                background-color: $alpha-bg;
+                cursor: pointer;
+                .music-thumb .play-icon {
+                    visibility: visible;
+                    background-color: #00000080;
+                }
+                .more {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+            .music-thumb {
+                @include equal-sides(60px);
+                position: relative;
+                border-radius: 4px;
+                overflow: hidden;
+                background-color: $loading-bg;
+                img {
+                    @include equal-sides(100%);
+                    object-fit: cover;
+                }
+                .play-icon {
+                    @include center(all);
+                    position: absolute;
+                    inset: 0;
+                    font-size: 1.6rem;
+                    visibility: hidden;
+                }
+            }
+            .info {
+                flex-grow: 1;
+                .music-title {
+                    @include ellipsis-overflow();
+                    font-size: 1.4rem;
+                    font-weight: 500;
+                    line-height: 1.3;
+                }
+                .author-name span:hover {
+                    color: $link-text-hover;
+                    text-decoration: underline;
+                }
+                .author-name, .release-time {
+                    @include ellipsis-overflow();
+                    margin-top: 3px;
+                    font-size: 1.2rem;
+                    line-height: 1.33;
+                    color: $text-secondary;
+                }
+            }
+            .more {
+                @include center(all);
+                @include equal-sides(38px);
+                font-size: 1.6rem;
+                margin-right: 10px;
+                border-radius: 50%;
+                opacity: 0;
+                visibility: hidden;
+                transition: opacity 0.2s, visibility 0.2s;
+                cursor: pointer;
+                &:hover {
+                    background-color: $alpha-bg;
+                }
+            }
+        }
+    }
+}
