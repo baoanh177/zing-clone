@@ -4,7 +4,7 @@
     overflow: hidden;
     .gallery-container {
         @include center(cross);
-        height: 209.663px;
+        height: 199.475px;
         gap: 30px;
         .gallery-item {
             flex-basis: calc((100% - 30px * 2) / 3);

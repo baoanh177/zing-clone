@@ -733,7 +733,7 @@ body::-webkit-scrollbar {
 .gallery .gallery-container {
   display: flex;
   align-items: center;
-  height: 209.663px;
+  height: 199.475px;
   gap: 30px;
 }
 .gallery .gallery-container .gallery-item {
@@ -804,6 +804,114 @@ body::-webkit-scrollbar {
   font-size: 16px;
   vertical-align: sub;
   min-width: 16px;
+}
+.recently .carousel-wrapper {
+  display: flex;
+  justify-content: space-between;
+  translate: -14px 0px;
+}
+.recently .carousel-wrapper .carousel-item {
+  padding: 0px 14px;
+  width: 14.28571%;
+}
+.recently .carousel-wrapper .carousel-item .card-item {
+  cursor: pointer;
+  position: relative;
+  width: 100%;
+}
+.recently .carousel-wrapper .carousel-item .card-item .img {
+  border-radius: 3px;
+  width: 100%;
+  overflow: hidden;
+}
+.recently .carousel-wrapper .carousel-item .card-item .img img {
+  transition: transform 0.7s linear;
+}
+.recently .carousel-wrapper .carousel-item .card-item .actions-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  visibility: hidden;
+  opacity: 0;
+  gap: 5px;
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition-property: visibility, opacity;
+  transition: 0.1s linear;
+}
+.recently .carousel-wrapper .carousel-item .card-item .actions-container .carousel-icon {
+  position: relative;
+}
+.recently .carousel-wrapper .carousel-item .card-item .actions-container .carousel-icon span {
+  display: none;
+}
+.recently .carousel-wrapper .carousel-item .card-item .actions-container .carousel-icon i {
+  color: #fff;
+  font-size: 20px;
+  margin: 0px 2px;
+  padding: 5px;
+  position: relative;
+}
+.recently .carousel-wrapper .carousel-item .card-item .actions-container .carousel-icon i:hover {
+  background-color: hsla(0, 0%, 100%, 0.3);
+  border-radius: 50%;
+}
+.recently .carousel-wrapper .carousel-item .card-item .actions-container .carousel-icon i:hover + span {
+  white-space: nowrap;
+  display: inline-block;
+  position: absolute;
+  top: -100%;
+  translate: -50% -80%;
+  left: 50%;
+  background-color: #000;
+  padding: 5px 10px;
+  font-size: 12px;
+  font-weight: 400;
+}
+.recently .carousel-wrapper .carousel-item .card-item .actions-container .carousel-icon i:hover + span::after {
+  content: "";
+  display: inline-block;
+  border: 5px solid transparent;
+  border-top-color: #000;
+  position: absolute;
+  top: 100%;
+  right: 50%;
+  translate: 50%;
+}
+.recently .carousel-wrapper .carousel-item .card-item .actions-container .play-video {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: 1px solid #fff;
+  padding: 5px 10px 5px 15px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.recently .carousel-wrapper .carousel-item .card-item .actions-container .play-video:hover {
+  filter: brightness(0.9);
+}
+.recently .carousel-wrapper .carousel-item .card-item .actions-container .play-video i {
+  color: #fff;
+  font-size: 25px;
+}
+.recently .carousel-wrapper .carousel-item .card-item:hover img {
+  transform: scale(1.1);
+}
+.recently .carousel-wrapper .carousel-item .card-item:hover .actions-container {
+  visibility: visible;
+  opacity: 1;
+}
+.recently .carousel-wrapper .carousel-item span {
+  display: inline-block;
+  margin-top: 12px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
 }
 
 .recommend {
