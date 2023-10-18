@@ -1,18 +1,34 @@
 .wrapper {
     margin-left: $sidebar-width;
+    padding-top: $header-height;
+    background-color: $layout-background;
 }
 
 .header {
+    position: fixed;
     @include center(cross);
     justify-content: space-between;
     padding: 0 $content-paddingX;
     height: $header-height;
     color: #d8d8d8dd;
-    background-color: $layout-background;
     position: fixed;
     top: 0px;
     left: 15.625%;
     right: 0px;
+    z-index: 100;
+    &::after {
+        content: "";
+        position: absolute;
+        height: 70px;
+        left: 0;
+        right: 0;
+        top: 0;
+        z-index: -1;
+        background-color: $layout-header-bg;
+        -webkit-backdrop-filter: blur(50px);
+        backdrop-filter: blur(50px);
+        box-shadow: 0 3px 5px $sticky-header-box-shadow;
+    }
 }
 
 .left-header {
@@ -30,7 +46,6 @@
         width: 440px;
         height: 40px;
         overflow: hidden;
-        border: 1px solid #000;
         border-radius: 20px;
         color: #eee;
         background-color: hsla(0, 0%, 100%, 0.1);

@@ -13,6 +13,49 @@
     }
 }
 
+// Width == Height
+@mixin equal-sides($param) {
+    width: $param;
+    height: $param;
+}
+
+// Button
+@mixin button($size, $type) {
+    display: inline-block;
+    border: 1px solid;
+    border-radius: 99px;
+    font-size: 1.2rem;
+    color: $text-secondary;
+    line-height: normal;
+    text-transform: uppercase;
+    user-select: none;
+    cursor: pointer;
+    &:hover {
+        color: $white;
+        border-color: $white;
+    }
+    @if($size == md) {
+        padding: 4px 24px;
+    }@else if($size == sm) {
+        padding: 4px 10px;
+    }
+    @if($type == solid) {
+        border-color: $purple-primary;
+        background-color: $purple-primary;
+    }@else if($type == regular) {
+        border-color: $border-primary;
+        background-color: transparent;
+    }
+    }
+
+// ellipsis overflow
+@mixin ellipsis-overflow() {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 100%;
+}
+
 @mixin section-title {
     display: flex;
     align-items: center;
@@ -144,5 +187,35 @@
             font-weight: 700;
             cursor: pointer;
         }
+    }
+    justify-content: space-between;
+}
+
+// tool-tip
+@mixin tool-tip() {
+    position: absolute;
+    text-align: center;
+    font-size: 12px;
+    top: -110%;
+    min-width: 40px;
+    left: 50%;
+    translate: -50%;
+    padding: 6px 4px;
+    border-radius: 4px;
+    color: $white;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s, visibility 0.2s;
+    background-color: #32323d;
+    white-space: nowrap;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        border-style: solid;
+        translate: -50%;
+        border-width: 8px 8px;
+        border-color: #32323d transparent transparent;
     }
 }

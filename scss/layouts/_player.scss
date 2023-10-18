@@ -1,3 +1,11 @@
+@mixin icon-hover() {
+    cursor: pointer;
+    transition: background-color 0.2s;
+    &:hover {
+        background-color: hsla(0, 0%, 100%, 0.1);
+    }
+}
+
 .player-model {
     position: fixed;
     @include center(cross);
@@ -9,6 +17,7 @@
     height: $player-model-height;
     border: 1px solid $border-player;
     background-color: $player-bg;
+    z-index: 100;
     .progress-bar {
         width: 70px;
         height: 3px;
@@ -32,8 +41,7 @@
                 position: absolute;
                 right: 0;
                 top: 50%;
-                width: 12px;
-                height: 12px;
+                @include equal-sides(12px);
                 border-radius: 50%;
                 opacity: 0;
                 transform: translate(50%, -50%);
@@ -49,29 +57,21 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: 598px;
-    height: 73px; // Sửa sau
     .controls {
         @include center(all);
         height: 50px;
         font-size: 1.8rem;
         > div {
             @include center(all);
-            width: 29px;
-            height: 29px;
+            @include equal-sides(29px);
             margin: 10px;
             color: $white;
             fill: $white;
             border-radius: 50%;
-            cursor: pointer;
-            border-radius: 50%;
-            transition: background-color .2s;
-            &:hover {
-                background-color: hsla(0,0%,100%,.1);
-            }
+            @include icon-hover();
         }
         .play-toggle {
-            width: auto;
-            height: auto;
+            @include equal-sides(auto);
             font-size: 40px;
             &:hover {
                 color: $link-text-hover;
@@ -102,8 +102,7 @@
     @include center(cross);
     gap: 10px;
     .music-thumb {
-        width: 64px;
-        height: 64px;
+        @include equal-sides(64px);
         border-radius: 4px;
         overflow: hidden;
         cursor: pointer;
@@ -139,10 +138,7 @@
         font-size: 1.6rem;
         padding: 8px 10px;
         border-radius: 50%;
-        transition: background-color .2s;
-        &:hover {
-            background-color: hsla(0,0%,100%,.1);
-        }
+        @include icon-hover();
     }
 }
 
@@ -150,7 +146,6 @@
     @include center(cross);
     .volume {
         @include center(cross);
-        
     }
     .divide {
         width: 1px;
@@ -164,12 +159,9 @@
         height: 32px;
         border-radius: 50%;
         color: $white;
+        @include icon-hover();
         svg {
             fill: currentColor;
-        }
-        &:hover {
-            background-color: hsla(0,0%,100%,.1);
-            cursor: pointer;
         }
     }
     .show-playlist {
@@ -178,12 +170,11 @@
         height: 30px;
         color: $white;
         border-radius: 4px;
-        background-color: hsla(0,0%,100%,.1);
+        background-color: hsla(0, 0%, 100%, 0.1);
         &:hover {
-            background-color: hsla(0,0%,100%,.2);
+            background-color: hsla(0, 0%, 100%, 0.2);
             cursor: pointer;
         }
-        cursor: pointer;
         svg {
             fill: currentColor;
         }
