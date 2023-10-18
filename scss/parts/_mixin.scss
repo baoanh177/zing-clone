@@ -13,9 +13,47 @@
     }
 }
 
+// Width == Height
 @mixin equal-sides($param) {
     width: $param;
     height: $param;
+}
+
+// Button
+@mixin button($size, $type) {
+    display: inline-block;
+    border: 1px solid;
+    border-radius: 99px;
+    font-size: 1.2rem;
+    color: $text-secondary;
+    line-height: normal;
+    text-transform: uppercase;
+    user-select: none;
+    cursor: pointer;
+    &:hover {
+        color: $white;
+        border-color: $white;
+    }
+    @if($size == md) {
+        padding: 4px 24px;
+    }@else if($size == sm) {
+        padding: 4px 10px;
+    }
+    @if($type == solid) {
+        border-color: $purple-primary;
+        background-color: $purple-primary;
+    }@else if($type == regular) {
+        border-color: $border-primary;
+        background-color: transparent;
+    }
+    }
+
+// ellipsis overflow
+@mixin ellipsis-overflow() {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 100%;
 }
 
 @mixin section-title {
