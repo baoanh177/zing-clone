@@ -789,7 +789,122 @@ body::-webkit-scrollbar {
   font-size: 12px;
 }
 
-.new-release {
+.recommend {
+  margin-top: 48px;
+  color: #fff;
+}
+.recommend .recommend-inner h3 {
+  font-size: 20px;
+  font-weight: 700;
+}
+.recommend .recommend-inner .recommend-list {
+  display: flex;
+  margin: 20px -14px 0;
+}
+.recommend .recommend-inner .recommend-list .recommend-item {
+  width: 20%;
+  padding: 0 14px;
+  cursor: pointer;
+}
+.recommend .recommend-inner .recommend-list .recommend-item .recommend-thumb {
+  position: relative;
+}
+.recommend .recommend-inner .recommend-list .recommend-item .recommend-thumb:hover img {
+  transform: scale(1.1);
+}
+.recommend .recommend-inner .recommend-list .recommend-item .recommend-thumb:hover .icon-list {
+  opacity: 1;
+  visibility: visible;
+}
+.recommend .recommend-inner .recommend-list .recommend-item .recommend-thumb .recommend-image {
+  overflow: hidden;
+  border-radius: 6px;
+}
+.recommend .recommend-inner .recommend-list .recommend-item .recommend-thumb .recommend-image img {
+  width: 100%;
+  transition: transform 0.7s ease;
+}
+.recommend .recommend-inner .recommend-list .recommend-item .recommend-thumb .icon-list {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  opacity: 0;
+  visibility: hidden;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  font-size: 18px;
+  translate: -50% -50%;
+}
+.recommend .recommend-inner .recommend-list .recommend-item .recommend-thumb .icon-list > div {
+  position: relative;
+  padding: 8px;
+  border-radius: 50%;
+}
+.recommend .recommend-inner .recommend-list .recommend-item .recommend-thumb .icon-list > div:hover {
+  background-color: rgba(255, 255, 255, 0.231372549);
+}
+.recommend .recommend-inner .recommend-list .recommend-item .recommend-thumb .icon-list > div:hover .tool-tip {
+  opacity: 1;
+  visibility: visible;
+}
+.recommend .recommend-inner .recommend-list .recommend-item .recommend-thumb .icon-list > div .tool-tip {
+  position: absolute;
+  text-align: center;
+  font-size: 12px;
+  top: -110%;
+  min-width: 40px;
+  left: 50%;
+  translate: -50%;
+  padding: 6px 4px;
+  border-radius: 4px;
+  color: #fff;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s, visibility 0.2s;
+  background-color: #32323d;
+  white-space: nowrap;
+}
+.recommend .recommend-inner .recommend-list .recommend-item .recommend-thumb .icon-list > div .tool-tip::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  border-style: solid;
+  translate: -50%;
+  border-width: 8px 8px;
+  border-color: #32323d transparent transparent;
+}
+.recommend .recommend-inner .recommend-list .recommend-item .recommend-thumb .icon-list .play-music {
+  font-size: 45px;
+}
+.recommend .recommend-inner .recommend-list .recommend-item .recommend-thumb .icon-list .play-music:hover {
+  opacity: 0.9;
+}
+.recommend .recommend-inner .recommend-list .recommend-info {
+  margin-top: 12px;
+}
+.recommend .recommend-inner .recommend-list .recommend-info h4 {
+  font-size: 14px;
+  margin-bottom: 4px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+.recommend .recommend-inner .recommend-list .recommend-info h4 a:hover {
+  color: #c273ed;
+}
+.recommend .recommend-inner .recommend-list .recommend-info :nth-of-type(2) {
+  line-height: 1.33;
+  color: hsla(0, 0%, 100%, 0.5);
+}
+.recommend .recommend-inner .recommend-list .recommend-info :nth-of-type(2) a {
+  font-weight: 400;
+}
+.recommend .recommend-inner .recommend-list .recommend-info :nth-of-type(2) a:hover {
+  text-decoration: underline;
+
+ .new-release {
   margin-top: 48px;
   color: #fff;
 }
