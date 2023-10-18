@@ -782,8 +782,8 @@ body::-webkit-scrollbar {
   display: flex;
   align-items: center;
   color: #fff;
-  font-family: 700;
   padding-bottom: 20px;
+  line-height: 30px;
   justify-content: space-between;
 }
 .recently .section-title h3.title {
@@ -792,15 +792,18 @@ body::-webkit-scrollbar {
 }
 .recently .section-title .discovery-btn {
   font-size: 12px;
+  font-weight: 500;
   color: rgba(255, 255, 255, 0.5);
   cursor: pointer;
+  line-height: 18px;
   text-transform: uppercase;
 }
-.recently .section-title .discovery-btn::after {
-  content: "\f054";
-  display: inline-block;
-  font-family: "Font Awesome 5 Free";
-  font-size: 12px;
+.recently .section-title .discovery-btn .fa-solid {
+  margin-left: 6px;
+  text-transform: none;
+  font-size: 16px;
+  vertical-align: sub;
+  min-width: 16px;
 }
 
 .recommend {

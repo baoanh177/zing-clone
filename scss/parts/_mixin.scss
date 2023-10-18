@@ -57,24 +57,135 @@
 }
 
 @mixin section-title {
-    @include center(cross);
+    display: flex;
+    align-items: center;
     color: #fff;
-    font-family: 700;
     padding-bottom: 20px;
+    line-height: 30px;
+    justify-content: space-between;
     h3.title {
         font-size: 20px;
         font-weight: 700;
     }
     .discovery-btn {
         font-size: 12px;
+        font-weight: 500;
         color: rgba(255, 255, 255, 0.5);
         cursor: pointer;
+        line-height: 18px;
         text-transform: uppercase;
-        &::after {
-            content: "\f054";
+        .fa-solid {
+            margin-left: 6px;
+            text-transform: none;
+            font-size: 16px;
+            vertical-align: sub;
+            min-width: 16px;
+        }
+    }
+}
+
+@mixin carousel-item {
+    display: flex;
+    .carousel-item {
+        padding: 0px 14px;
+        width: 14.28571%;
+        .card-item {
+            cursor: pointer;
+            position: relative;
+            width: 100%;
+            .img {
+                border-radius: 3px;
+                width: 100%;
+                overflow: hidden;
+                img {
+                    transition: transform 0.7s linear;
+                }
+            }
+            .actions-container {
+                @include center(all);
+                width: 100%;
+                visibility: hidden;
+                opacity: 0;
+                gap: 5px;
+                position: absolute;
+                inset: 0;
+                background-color: rgba(0, 0, 0, 0.5);
+                transition-property: visibility, opacity;
+                transition: 0.1s linear;
+                .carousel-icon {
+                    position: relative;
+                    span {
+                        display: none;
+                    }
+                    i {
+                        color: #fff;
+                        font-size: 20px;
+                        margin: 0px 2px;
+                        padding: 5px;
+                        position: relative;
+                        &:hover {
+                            background-color: hsla(0, 0%, 100%, 0.3);
+                            border-radius: 50%;
+                            + span {
+                                white-space: nowrap;
+                                display: inline-block;
+                                position: absolute;
+                                top: -100%;
+                                translate: -50% -80%;
+                                left: 50%;
+                                background-color: #000;
+                                padding: 5px 10px;
+                                font-size: 12px;
+                                font-weight: 400;
+                                &::after {
+                                    content: "";
+                                    display: inline-block;
+
+                                    border: 5px solid transparent;
+                                    border-top-color: #000;
+                                    position: absolute;
+                                    top: 100%;
+                                    right: 50%;
+                                    translate: 50%;
+                                }
+                            }
+                        }
+                    }
+                }
+                .play-video {
+                    @include center(all);
+                    background-color: transparent;
+                    border: 1px solid #fff;
+                    padding: 5px 10px 5px 15px;
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    &:hover {
+                        filter: brightness(0.9);
+                    }
+                    i {
+                        color: #fff;
+                        font-size: 25px;
+                    }
+                }
+            }
+            &:hover {
+                img {
+                    transform: scale(1.1);
+                }
+                .actions-container {
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+        }
+        span {
             display: inline-block;
-            font-family: "Font Awesome 5 Free";
-            font-size: 12px;
+            margin-top: 12px;
+            color: #fff;
+            font-size: 14px;
+            font-weight: 700;
+            cursor: pointer;
         }
     }
     justify-content: space-between;
