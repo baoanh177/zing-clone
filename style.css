@@ -806,6 +806,7 @@ body::-webkit-scrollbar {
   min-width: 16px;
 }
 .recently .carousel-wrapper {
+  min-width: 1146.8px;
   display: flex;
   translate: -14px 0px;
 }
@@ -819,7 +820,7 @@ body::-webkit-scrollbar {
   width: 100%;
 }
 .recently .carousel-wrapper .carousel-item .card-item .img {
-  border-radius: 3px;
+  border-radius: 5px;
   width: 100%;
   overflow: hidden;
 }
@@ -1217,6 +1218,7 @@ body::-webkit-scrollbar {
   min-width: 16px;
 }
 .playlist .carousel-wrapper {
+  min-width: 1146.8px;
   display: flex;
   translate: -14px 0px;
 }
@@ -1230,7 +1232,7 @@ body::-webkit-scrollbar {
   width: 100%;
 }
 .playlist .carousel-wrapper .carousel-item .card-item .img {
-  border-radius: 3px;
+  border-radius: 5px;
   width: 100%;
   overflow: hidden;
 }

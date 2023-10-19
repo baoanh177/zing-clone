@@ -4,6 +4,7 @@
         @include section-title;
     }
     .carousel-wrapper {
+        min-width: 1146.8px;
         @include carousel-item;
         .carousel-item {
             width: 20%;
