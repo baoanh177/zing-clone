@@ -5,7 +5,6 @@
         h3 {
             font-size: 20px;
             font-weight: 700;
-            // margin-bottom: 20px;
         }
         .recommend-list {
             display: flex;
@@ -26,6 +25,7 @@
                         }
                     }
                     .recommend-image {
+                        position: relative;
                         overflow: hidden;
                         border-radius: 6px;
                         img {
@@ -39,15 +39,12 @@
                         justify-content: space-evenly;
                         opacity: 0;
                         visibility: hidden;
-                        width: 100%;
-                        top: 50%;
-                        left: 50%;
+                        inset: 0;
                         font-size: 18px;
-                        // pointer-events: none;
-                        translate: -50% -50%;
+                        background-color: #00000057;
                         > div {
                             position: relative;
-                            padding: 8px;
+                            padding: 6px;
                             border-radius: 50%;
                             &:hover {
                                 background-color: #ffffff3b;
@@ -61,9 +58,13 @@
                             }
                         }
                         .play-music {
-                            font-size: 45px;
+                            @include center(all);
+                            width: 45px;
+                            height: 45px;
+                            border-radius: 50%;
+                            border: 1px solid #fff;
                             &:hover {
-                                opacity: 0.9;
+                                filter: brightness(0.9);
                             }
                         }
                     }

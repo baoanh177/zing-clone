@@ -807,7 +807,7 @@ body::-webkit-scrollbar {
 }
 .recently .carousel-wrapper {
   display: flex;
-  translate: -14px 0px;
+  margin: 0 -14px;
 }
 .recently .carousel-wrapper .carousel-item {
   padding: 0px 14px;
@@ -829,7 +829,7 @@ body::-webkit-scrollbar {
 .recently .carousel-wrapper .carousel-item .card-item .actions-container {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   width: 100%;
   visibility: hidden;
   opacity: 0;
@@ -953,6 +953,7 @@ body::-webkit-scrollbar {
   visibility: visible;
 }
 .recommend .recommend-inner .recommend-list .recommend-item .recommend-thumb .recommend-image {
+  position: relative;
   overflow: hidden;
   border-radius: 6px;
 }
@@ -967,15 +968,13 @@ body::-webkit-scrollbar {
   justify-content: space-evenly;
   opacity: 0;
   visibility: hidden;
-  width: 100%;
-  top: 50%;
-  left: 50%;
+  inset: 0;
   font-size: 18px;
-  translate: -50% -50%;
+  background-color: rgba(0, 0, 0, 0.3411764706);
 }
 .recommend .recommend-inner .recommend-list .recommend-item .recommend-thumb .icon-list > div {
   position: relative;
-  padding: 8px;
+  padding: 6px;
   border-radius: 50%;
 }
 .recommend .recommend-inner .recommend-list .recommend-item .recommend-thumb .icon-list > div:hover {
@@ -1013,10 +1012,16 @@ body::-webkit-scrollbar {
   border-color: #32323d transparent transparent;
 }
 .recommend .recommend-inner .recommend-list .recommend-item .recommend-thumb .icon-list .play-music {
-  font-size: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 1px solid #fff;
 }
 .recommend .recommend-inner .recommend-list .recommend-item .recommend-thumb .icon-list .play-music:hover {
-  opacity: 0.9;
+  filter: brightness(0.9);
 }
 .recommend .recommend-inner .recommend-list .recommend-info {
   margin-top: 12px;
@@ -1218,7 +1223,7 @@ body::-webkit-scrollbar {
 }
 .playlist .carousel-wrapper {
   display: flex;
-  translate: -14px 0px;
+  margin: 0 -14px;
 }
 .playlist .carousel-wrapper .carousel-item {
   padding: 0px 14px;
@@ -1240,7 +1245,7 @@ body::-webkit-scrollbar {
 .playlist .carousel-wrapper .carousel-item .card-item .actions-container {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   width: 100%;
   visibility: hidden;
   opacity: 0;

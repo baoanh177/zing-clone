@@ -34,19 +34,19 @@
         color: $white;
         border-color: $white;
     }
-    @if($size == md) {
+    @if ($size == md) {
         padding: 4px 24px;
-    }@else if($size == sm) {
+    } @else if($size == sm) {
         padding: 4px 10px;
     }
-    @if($type == solid) {
+    @if ($type == solid) {
         border-color: $purple-primary;
         background-color: $purple-primary;
-    }@else if($type == regular) {
+    } @else if($type == regular) {
         border-color: $border-primary;
         background-color: transparent;
     }
-    }
+}
 
 // ellipsis overflow
 @mixin ellipsis-overflow() {
@@ -86,7 +86,7 @@
 
 @mixin carousel-item {
     display: flex;
-    translate: -14px 0px;
+    margin: 0 -14px;
     .carousel-item {
         padding: 0px 14px;
         width: 14.28571%;
@@ -103,7 +103,8 @@
                 }
             }
             .actions-container {
-                @include center(all);
+                @include center(cross);
+                justify-content: space-evenly;
                 width: 100%;
                 visibility: hidden;
                 opacity: 0;
@@ -141,7 +142,6 @@
                                 &::after {
                                     content: "";
                                     display: inline-block;
-
                                     border: 5px solid transparent;
                                     border-top-color: #000;
                                     position: absolute;
