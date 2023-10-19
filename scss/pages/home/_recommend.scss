@@ -42,7 +42,8 @@
                         inset: 0;
                         font-size: 18px;
                         background-color: #00000057;
-                        > div {
+                        .add-library,
+                        .more {
                             position: relative;
                             padding: 6px;
                             border-radius: 50%;
@@ -58,14 +59,7 @@
                             }
                         }
                         .play-music {
-                            @include center(all);
-                            width: 45px;
-                            height: 45px;
-                            border-radius: 50%;
-                            border: 1px solid #fff;
-                            &:hover {
-                                filter: brightness(0.9);
-                            }
+                            @include play-icon(secondary);
                         }
                     }
                 }
