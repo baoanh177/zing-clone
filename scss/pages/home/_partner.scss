@@ -17,7 +17,7 @@
     .list-partner {
         @include center(all);
         flex-wrap: wrap;
-        gap: 30px 20px;
+        row-gap: 30px;
         margin: 0px -15px;
         .item-partner {
             @include center(all);
@@ -26,6 +26,7 @@
             background-color: #f7f7f7;
             height: 64.263px;   
             border-radius: 8px;
+            margin: 0px 10px;
             img {
                 max-width: 90%;
                 max-height: 80%;
