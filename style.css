@@ -1453,4 +1453,44 @@ body::-webkit-scrollbar {
   width: 20%;
 }
 
+.partner {
+  margin-top: 48px;
+  padding: 0px 40px;
+}
+.partner .title {
+  text-align: center;
+  text-transform: uppercase;
+  color: hsla(0, 0%, 100%, 0.5);
+  font-size: 12px;
+  letter-spacing: 1.71px;
+  margin-bottom: 24px;
+  font-weight: 700;
+}
+.partner .title:hover {
+  color: #c273ed;
+}
+.partner .list-partner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  row-gap: 30px;
+  margin: 0px -15px;
+}
+.partner .list-partner .item-partner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  width: calc(12.5% - 20px);
+  background-color: #f7f7f7;
+  height: 64.263px;
+  border-radius: 8px;
+  margin: 0px 10px;
+}
+.partner .list-partner .item-partner img {
+  max-width: 90%;
+  max-height: 80%;
+}
+
 /*# sourceMappingURL=style.css.map */
