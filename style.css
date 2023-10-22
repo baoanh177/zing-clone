@@ -669,6 +669,9 @@ body::-webkit-scrollbar {
   border-radius: 50%;
   border: 1px solid #fff;
 }
+.player .controls .play-toggle i {
+  font-size: 20px;
+}
 .player .controls .play-toggle:hover {
   color: #9b4de0;
   border: 1px solid #9b4de0;
@@ -860,10 +863,10 @@ body::-webkit-scrollbar {
 .recently .section-title {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   color: #fff;
   padding-bottom: 20px;
   line-height: 30px;
-  justify-content: space-between;
 }
 .recently .section-title h3.title {
   font-size: 20px;
@@ -975,6 +978,9 @@ body::-webkit-scrollbar {
   cursor: pointer;
   border-radius: 50%;
   border: 1px solid #fff;
+}
+.recently .carousel-wrapper .carousel-item .card-item .actions-container .play-video i {
+  font-size: 20px;
 }
 .recently .carousel-wrapper .carousel-item .card-item .actions-container .play-video:hover {
   filter: brightness(0.9);
@@ -1116,6 +1122,9 @@ body::-webkit-scrollbar {
   cursor: pointer;
   border-radius: 50%;
   border: 1px solid #fff;
+}
+.recommend .recommend-inner .recommend-list .recommend-item .recommend-thumb .icon-list .play-music i {
+  font-size: 20px;
 }
 .recommend .recommend-inner .recommend-list .recommend-item .recommend-thumb .icon-list .play-music:hover {
   filter: brightness(0.9);
@@ -1294,10 +1303,10 @@ body::-webkit-scrollbar {
 .playlist .section-title {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   color: #fff;
   padding-bottom: 20px;
   line-height: 30px;
-  justify-content: space-between;
 }
 .playlist .section-title h3.title {
   font-size: 20px;
@@ -1410,6 +1419,9 @@ body::-webkit-scrollbar {
   border-radius: 50%;
   border: 1px solid #fff;
 }
+.playlist .carousel-wrapper .carousel-item .card-item .actions-container .play-video i {
+  font-size: 20px;
+}
 .playlist .carousel-wrapper .carousel-item .card-item .actions-container .play-video:hover {
   filter: brightness(0.9);
 }
@@ -1491,6 +1503,186 @@ body::-webkit-scrollbar {
 .partner .list-partner .item-partner img {
   max-width: 90%;
   max-height: 80%;
+}
+
+.new-songs-rank {
+  text-transform: capitalize;
+  color: #fff;
+  margin-top: 48px;
+}
+.new-songs-rank .heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  padding-bottom: 20px;
+  line-height: 30px;
+}
+.new-songs-rank .heading h3.title {
+  font-size: 20px;
+  font-weight: 700;
+}
+.new-songs-rank .heading .discovery-btn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  line-height: 18px;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+.new-songs-rank .heading .discovery-btn i {
+  font-size: 1.6rem;
+}
+.new-songs-rank .heading .discovery-btn:hover {
+  color: #c273ed;
+}
+
+.box {
+  position: relative;
+  margin: 0 -14px;
+  overflow: hidden;
+}
+.box .prev-btn,
+.box .next-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  position: absolute;
+  font-size: 14px;
+  top: 50%;
+  translate: 0 -50%;
+  z-index: 3;
+  cursor: pointer;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  color: #000;
+  background-color: #fff;
+}
+.box .prev-btn:hover,
+.box .next-btn:hover {
+  filter: brightness(0.9);
+}
+.box .next-btn {
+  right: 0px;
+}
+.box .inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.inner .item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  height: auto;
+  margin: 0 14px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: hsla(0, 0%, 100%, 0.1);
+}
+.inner .item img {
+  width: 120px;
+  height: 120px;
+  border-radius: 4px;
+}
+
+.thumb .image {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.thumb .image img {
+  transition: transform 0.7s ease;
+}
+.thumb .image .icon-list {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  inset: 0;
+  opacity: 0;
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.3411764706);
+}
+.thumb .image .icon-list .play-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 1px solid #fff;
+}
+.thumb .image .icon-list .play-icon i {
+  font-size: 20px;
+}
+.thumb .image .icon-list .play-icon:hover {
+  filter: brightness(0.9);
+}
+.thumb:hover img {
+  transform: scale(1.2);
+}
+.thumb:hover .icon-list {
+  opacity: 1;
+  visibility: visible;
+}
+
+.item .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 120px;
+}
+.item .info .top-info {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 3px;
+}
+.item .info .top-info h4.name {
+  font-size: 14px;
+  line-height: 1.3;
+  font-weight: 500;
+}
+.item .info .top-info a.single {
+  margin-top: 3px;
+  font-size: 12px;
+  font-weight: 400;
+  color: hsla(0, 0%, 100%, 0.5);
+}
+.item .info .top-info a.single:hover {
+  color: #c273ed;
+  text-decoration: underline;
+}
+.item .info .bot-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.item .info .bot-info .rank {
+  font-size: 40px;
+  font-weight: 900;
+  opacity: 0.4;
+  -webkit-text-stroke: 1px #fff;
+  color: transparent;
+  font-family: "Roboto", sans-serif;
+}
+.item .info .bot-info .release-day {
+  display: flex;
+  align-items: end;
+  font-size: 14px;
+  color: hsla(0, 0%, 100%, 0.5);
 }
 
 /*# sourceMappingURL=style.css.map */

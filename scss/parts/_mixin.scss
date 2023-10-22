@@ -57,12 +57,11 @@
 }
 
 @mixin section-title {
-    display: flex;
-    align-items: center;
-    color: #fff;
+    @include center(cross);
+    justify-content: space-between;
+    color: $white;
     padding-bottom: 20px;
     line-height: 30px;
-    justify-content: space-between;
     h3.title {
         font-size: 20px;
         font-weight: 700;
@@ -216,6 +215,9 @@
     cursor: pointer;
     border-radius: 50%;
     border: 1px solid #fff;
+    i {
+        font-size: 20px;
+    }
     &:hover {
         @if ($type == primary) {
             color: $purple-primary;
