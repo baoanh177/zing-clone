@@ -49,6 +49,18 @@
             }
         }
     }
+    .icon {
+        position: relative;
+        .tool-tip {
+            @include tool-tip();
+        }
+        &:hover {
+            .tool-tip {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
 }
 
 .player {
@@ -63,19 +75,27 @@
         font-size: 1.8rem;
         > div {
             @include center(all);
-            @include equal-sides(29px);
+            @include equal-sides(32px);
+            position: relative;
             margin: 10px;
             color: $white;
             fill: $white;
             border-radius: 50%;
-            @include icon-hover();
+            &:not(.play-toggle) {
+                @include icon-hover();
+            }
+            .tool-tip {
+                @include tool-tip();
+            }
+            &:hover {
+                .tool-tip {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
         }
         .play-toggle {
-            @include equal-sides(auto);
-            font-size: 40px;
-            &:hover {
-                color: $link-text-hover;
-            }
+            @include play-icon(primary);
         }
     }
     .play-inner {
@@ -130,13 +150,15 @@
     }
     .music-actions {
         display: flex;
+        gap: 4px;
         color: $white;
         font-size: 1.6rem;
         cursor: pointer;
     }
     .icon {
+        @include center(all);
+        @include equal-sides(36px);
         font-size: 1.6rem;
-        padding: 8px 10px;
         border-radius: 50%;
         @include icon-hover();
     }
@@ -155,8 +177,7 @@
     }
     .icon {
         @include center(all);
-        width: 36px;
-        height: 32px;
+        @include equal-sides(36px);
         border-radius: 50%;
         color: $white;
         @include icon-hover();

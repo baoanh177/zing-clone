@@ -1,0 +1,36 @@
+.partner {
+    margin-top: 48px;
+    padding: 0px 40px;
+    .title {
+        text-align: center;
+        text-transform: uppercase;
+        color: $text-secondary;
+        font-size: 12px;
+        letter-spacing: 1.71px;
+        margin-bottom: 24px;
+        font-weight: 700;
+        &:hover {
+            color: $link-text-hover;
+        }
+    }
+
+    .list-partner {
+        @include center(all);
+        flex-wrap: wrap;
+        row-gap: 30px;
+        margin: 0px -15px;
+        .item-partner {
+            @include center(all);
+            flex-grow: 1;
+            width: calc(12.5% - 20px);
+            background-color: #f7f7f7;
+            height: 64.263px;   
+            border-radius: 8px;
+            margin: 0px 10px;
+            img {
+                max-width: 90%;
+                max-height: 80%;
+            }
+        }
+    }
+}

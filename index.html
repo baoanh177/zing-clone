@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" />
 
     <!-- Google-font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -318,9 +318,13 @@
                     <div class="music-actions">
                         <div class="add-to-library icon">
                             <i class="fa-regular fa-heart"></i>
+                            <div class="tool-tip">Thêm vào thư viện</div>
                         </div>
-                        <div class="show-more icon">
-                            <i class="fa-solid fa-ellipsis"></i>
+                        <div class="show-more">
+                            <div class="show-more-icon icon">
+                                <i class="fa-solid fa-ellipsis"></i>
+                                <div class="tool-tip">Xem thêm</div>
+                            </div>
                             <div class="model"></div>
                         </div>
                     </div>
@@ -330,12 +334,13 @@
                     <div class="controls">
                         <div class="random-toggle">
                             <i class="fa-solid fa-shuffle"></i>
+                            <div class="tool-tip">Bật phát ngẫu nhiên</div>
                         </div>
                         <div class="prev-btn">
                             <i class="fa-solid fa-backward-step"></i>
                         </div>
                         <div class="play-toggle">
-                            <i class="fa-regular fa-circle-play"></i>
+                            <i class="fa-solid fa-play"></i>
                         </div>
                         <div class="next-btn">
                             <i class="fa-solid fa-forward-step"></i>
@@ -347,6 +352,7 @@
                                     d="M0 4.75A3.75 3.75 0 0 1 3.75 1h8.5A3.75 3.75 0 0 1 16 4.75v5a3.75 3.75 0 0 1-3.75 3.75H9.81l1.018 1.018a.75.75 0 1 1-1.06 1.06L6.939 12.75l2.829-2.828a.75.75 0 1 1 1.06 1.06L9.811 12h2.439a2.25 2.25 0 0 0 2.25-2.25v-5a2.25 2.25 0 0 0-2.25-2.25h-8.5A2.25 2.25 0 0 0 1.5 4.75v5A2.25 2.25 0 0 0 3.75 12H5v1.5H3.75A3.75 3.75 0 0 1 0 9.75v-5z">
                                 </path>
                             </svg>
+                            <div class="tool-tip">Bật phát lại tất cả</div>
                         </div>
                     </div>
                     <div class="play-inner">
@@ -369,6 +375,7 @@
                                 d="M15.002 1.75A1.75 1.75 0 0 0 13.252 0h-10.5a1.75 1.75 0 0 0-1.75 1.75v12.5c0 .966.783 1.75 1.75 1.75h10.5a1.75 1.75 0 0 0 1.75-1.75V1.75zm-1.75-.25a.25.25 0 0 1 .25.25v12.5a.25.25 0 0 1-.25.25h-10.5a.25.25 0 0 1-.25-.25V1.75a.25.25 0 0 1 .25-.25h10.5z">
                             </path>
                         </svg>
+                        <div class="tool-tip">Xem MV</div>
                     </div>
                     <div class="karaoke-btn icon">
                         <svg role="img" height="16" width="16" aria-hidden="true" viewBox="0 0 16 16"
@@ -377,6 +384,7 @@
                                 d="M13.426 2.574a2.831 2.831 0 0 0-4.797 1.55l3.247 3.247a2.831 2.831 0 0 0 1.55-4.797zM10.5 8.118l-2.619-2.62A63303.13 63303.13 0 0 0 4.74 9.075L2.065 12.12a1.287 1.287 0 0 0 1.816 1.816l3.06-2.688 3.56-3.129zM7.12 4.094a4.331 4.331 0 1 1 4.786 4.786l-3.974 3.493-3.06 2.689a2.787 2.787 0 0 1-3.933-3.933l2.676-3.045 3.505-3.99z">
                             </path>
                         </svg>
+                        <div class="tool-tip">Xem lại bài hát</div>
                     </div>
                     <div class="window-mode-btn icon">
                         <svg role="img" height="16" width="16" aria-hidden="true" viewBox="0 0 16 16"
@@ -388,6 +396,7 @@
                                 d="M15.25 9.007a.75.75 0 0 1 .75.75v4.493a.75.75 0 0 1-.75.75H9.325a.75.75 0 0 1-.75-.75V9.757a.75.75 0 0 1 .75-.75h5.925z">
                             </path>
                         </svg>
+                        <div class="tool-tip">Chế độ cửa sổ</div>
                     </div>
                     <div class="volume">
                         <div class="icon">
@@ -463,26 +472,27 @@
                 <section class="recently">
                     <div class="section-title">
                         <h3 class="title">Gần Đây</h3>
-                        <a href="#!" class="discovery-btn">Tất cả
+                        <a href="#!" class="discovery-btn"><span>Tất cả</span>
                             <i class="fa-solid fa-chevron-right"></i>
                         </a>
                     </div>
                     <div class="carousel-wrapper">
                         <div class="carousel-item">
                             <div class="card-item">
-                                <div class="img"><img width="100%" height="100%" src="./assets/images/recently-1.png"
-                                        alt=""></div>
+                                <div class="img">
+                                    <img width="100%" height="100%" src="./assets/images/recently-1.png" alt="" />
+                                </div>
                                 <div class="actions-container">
                                     <div class="carousel-icon">
                                         <i class="fa-regular fa-heart"></i>
-                                        <span>Thêm vào thư viện</span>
+                                        <div class="tool-tip">Thêm vào thư viện</div>
                                     </div>
                                     <div class="play-video">
                                         <i class="fa-solid fa-play"></i>
                                     </div>
                                     <div class="carousel-icon">
                                         <i class="fa-solid fa-ellipsis"></i>
-                                        <span>Khác</span>
+                                        <div class="tool-tip">Khác</div>
                                     </div>
                                 </div>
                             </div>
@@ -490,19 +500,20 @@
                         </div>
                         <div class="carousel-item">
                             <div class="card-item">
-                                <div class="img"><img width="100%" height="100%" src="./assets/images/recently-2.jpg"
-                                        alt=""></div>
+                                <div class="img">
+                                    <img width="100%" height="100%" src="./assets/images/recently-2.jpg" alt="" />
+                                </div>
                                 <div class="actions-container">
                                     <div class="carousel-icon">
                                         <i class="fa-regular fa-heart"></i>
-                                        <span>Thêm vào thư viện</span>
+                                        <div class="tool-tip">Thêm vào thư viện</div>
                                     </div>
                                     <div class="play-video">
                                         <i class="fa-solid fa-play"></i>
                                     </div>
                                     <div class="carousel-icon">
                                         <i class="fa-solid fa-ellipsis"></i>
-                                        <span>Khác</span>
+                                        <div class="tool-tip">Khác</div>
                                     </div>
                                 </div>
                             </div>
@@ -510,19 +521,20 @@
                         </div>
                         <div class="carousel-item">
                             <div class="card-item">
-                                <div class="img"><img width="100%" height="100%" src="./assets/images/recently-3.jpg"
-                                        alt=""></div>
+                                <div class="img">
+                                    <img width="100%" height="100%" src="./assets/images/recently-3.jpg" alt="" />
+                                </div>
                                 <div class="actions-container">
                                     <div class="carousel-icon">
                                         <i class="fa-regular fa-heart"></i>
-                                        <span>Thêm vào thư viện</span>
+                                        <div class="tool-tip">Thêm vào thư viện</div>
                                     </div>
                                     <div class="play-video">
                                         <i class="fa-solid fa-play"></i>
                                     </div>
                                     <div class="carousel-icon">
                                         <i class="fa-solid fa-ellipsis"></i>
-                                        <span>Khác</span>
+                                        <div class="tool-tip">Khác</div>
                                     </div>
                                 </div>
                             </div>
@@ -530,19 +542,20 @@
                         </div>
                         <div class="carousel-item">
                             <div class="card-item">
-                                <div class="img"><img width="100%" height="100%" src="./assets/images/recently-4.jpg"
-                                        alt=""></div>
+                                <div class="img">
+                                    <img width="100%" height="100%" src="./assets/images/recently-4.jpg" alt="" />
+                                </div>
                                 <div class="actions-container">
                                     <div class="carousel-icon">
                                         <i class="fa-regular fa-heart"></i>
-                                        <span>Thêm vào thư viện</span>
+                                        <div class="tool-tip">Thêm vào thư viện</div>
                                     </div>
                                     <div class="play-video">
                                         <i class="fa-solid fa-play"></i>
                                     </div>
                                     <div class="carousel-icon">
                                         <i class="fa-solid fa-ellipsis"></i>
-                                        <span>Khác</span>
+                                        <div class="tool-tip">Khác</div>
                                     </div>
                                 </div>
                             </div>
@@ -550,19 +563,20 @@
                         </div>
                         <div class="carousel-item">
                             <div class="card-item">
-                                <div class="img"><img width="100%" height="100%" src="./assets/images/recently-4.jpg"
-                                        alt=""></div>
+                                <div class="img">
+                                    <img width="100%" height="100%" src="./assets/images/recently-4.jpg" alt="" />
+                                </div>
                                 <div class="actions-container">
                                     <div class="carousel-icon">
                                         <i class="fa-regular fa-heart"></i>
-                                        <span>Thêm vào thư viện</span>
+                                        <div class="tool-tip">Thêm vào thư viện</div>
                                     </div>
                                     <div class="play-video">
                                         <i class="fa-solid fa-play"></i>
                                     </div>
                                     <div class="carousel-icon">
                                         <i class="fa-solid fa-ellipsis"></i>
-                                        <span>Khác</span>
+                                        <div class="tool-tip">Khác</div>
                                     </div>
                                 </div>
                             </div>
@@ -589,7 +603,9 @@
                                                 Thêm vào thư viện
                                             </div>
                                         </div>
-                                        <i class="fa-regular fa-circle-play play-music"></i>
+                                        <div class="play-music">
+                                            <i class="fa-solid fa-play"></i>
+                                        </div>
                                         <div class="more">
                                             <i class="fa-solid fa-ellipsis"></i>
                                             <div class="tool-tip">Khác</div>
@@ -618,7 +634,9 @@
                                                 Thêm vào thư viện
                                             </div>
                                         </div>
-                                        <i class="fa-regular fa-circle-play play-music"></i>
+                                        <div class="play-music">
+                                            <i class="fa-solid fa-play"></i>
+                                        </div>
                                         <div class="more">
                                             <i class="fa-solid fa-ellipsis"></i>
                                             <div class="tool-tip">Khác</div>
@@ -649,7 +667,9 @@
                                                 Thêm vào thư viện
                                             </div>
                                         </div>
-                                        <i class="fa-regular fa-circle-play play-music"></i>
+                                        <div class="play-music">
+                                            <i class="fa-solid fa-play"></i>
+                                        </div>
                                         <div class="more">
                                             <i class="fa-solid fa-ellipsis"></i>
                                             <div class="tool-tip">Khác</div>
@@ -679,7 +699,9 @@
                                                 Thêm vào thư viện
                                             </div>
                                         </div>
-                                        <i class="fa-regular fa-circle-play play-music"></i>
+                                        <div class="play-music">
+                                            <i class="fa-solid fa-play"></i>
+                                        </div>
                                         <div class="more">
                                             <i class="fa-solid fa-ellipsis"></i>
                                             <div class="tool-tip">Khác</div>
@@ -707,7 +729,9 @@
                                                 Thêm vào thư viện
                                             </div>
                                         </div>
-                                        <i class="fa-regular fa-circle-play play-music"></i>
+                                        <div class="play-music">
+                                            <i class="fa-solid fa-play"></i>
+                                        </div>
                                         <div class="more">
                                             <i class="fa-solid fa-ellipsis"></i>
                                             <div class="tool-tip">Khác</div>
@@ -746,17 +770,21 @@
                         <div class="list-music">
                             <div class="music-item">
                                 <div class="music-thumb">
-                                    <img src="./assets/images/gallery-item-3.jpg" alt="">
+                                    <img src="./assets/images/gallery-item-3.jpg" alt="" />
                                     <div class="play-icon">
                                         <i class="fa-solid fa-play"></i>
                                     </div>
                                 </div>
                                 <div class="info">
-                                    <div class="music-title">Kẻ Ôm Vấn Vương</div>
+                                    <div class="music-title">
+                                        Kẻ Ôm Vấn Vương
+                                    </div>
                                     <h3 class="author-name">
                                         <span>Reddy</span>
                                     </h3>
-                                    <div class="release-time">2 ngày trước</div>
+                                    <div class="release-time">
+                                        2 ngày trước
+                                    </div>
                                 </div>
                                 <div class="more">
                                     <i class="fa-solid fa-ellipsis"></i>
@@ -764,17 +792,21 @@
                             </div>
                             <div class="music-item">
                                 <div class="music-thumb">
-                                    <img src="./assets/images/gallery-item-3.jpg" alt="">
+                                    <img src="./assets/images/gallery-item-3.jpg" alt="" />
                                     <div class="play-icon">
                                         <i class="fa-solid fa-play"></i>
                                     </div>
                                 </div>
                                 <div class="info">
-                                    <div class="music-title">Kẻ Ôm Vấn Vương</div>
+                                    <div class="music-title">
+                                        Kẻ Ôm Vấn Vương
+                                    </div>
                                     <h3 class="author-name">
                                         <span>Reddy</span>
                                     </h3>
-                                    <div class="release-time">2 ngày trước</div>
+                                    <div class="release-time">
+                                        2 ngày trước
+                                    </div>
                                 </div>
                                 <div class="more">
                                     <i class="fa-solid fa-ellipsis"></i>
@@ -782,17 +814,21 @@
                             </div>
                             <div class="music-item">
                                 <div class="music-thumb">
-                                    <img src="./assets/images/gallery-item-3.jpg" alt="">
+                                    <img src="./assets/images/gallery-item-3.jpg" alt="" />
                                     <div class="play-icon">
                                         <i class="fa-solid fa-play"></i>
                                     </div>
                                 </div>
                                 <div class="info">
-                                    <div class="music-title">Kẻ Ôm Vấn Vương</div>
+                                    <div class="music-title">
+                                        Kẻ Ôm Vấn Vương
+                                    </div>
                                     <h3 class="author-name">
                                         <span>Reddy</span>
                                     </h3>
-                                    <div class="release-time">2 ngày trước</div>
+                                    <div class="release-time">
+                                        2 ngày trước
+                                    </div>
                                 </div>
                                 <div class="more">
                                     <i class="fa-solid fa-ellipsis"></i>
@@ -803,7 +839,7 @@
                 </section>
                 <!-- End New Release -->
 
-                <!-- Play List 1 -->
+                <!-- Playlist -->
                 <section class="playlist">
                     <div class="section-title">
                         <h3 class="title">Nhìn lá vàng rơi</h3>
@@ -811,103 +847,407 @@
                     <div class="carousel-wrapper">
                         <div class="carousel-item">
                             <div class="card-item">
-                                <div class="img"><img width="100%" height="100%" src="./assets/images/playlist/playlist-1.jpg" alt=""></div>
+                                <div class="img">
+                                    <img width="100%" height="100%" src="./assets/images/playlist/playlist-1.jpg"
+                                        alt="" />
+                                </div>
                                 <div class="actions-container">
                                     <div class="carousel-icon">
                                         <i class="fa-regular fa-heart"></i>
-                                        <span>Thêm vào thư viện</span>
+                                        <div class="tool-tip">Thêm vào thư viện</div>
                                     </div>
                                     <div class="play-video">
                                         <i class="fa-solid fa-play"></i>
                                     </div>
                                     <div class="carousel-icon">
                                         <i class="fa-solid fa-ellipsis"></i>
-                                        <span>Khác</span>
+                                        <div class="tool-tip">Khác</div>
                                     </div>
                                 </div>
                             </div>
-                            <p class="desc">Đắm mình vào sắc thu bên người mình thương</p>
+                            <p class="desc">
+                                Đắm mình vào sắc thu bên người mình thương
+                            </p>
                         </div>
                         <div class="carousel-item">
                             <div class="card-item">
-                                <div class="img"><img width="100%" height="100%" src="./assets/images/playlist/playlist-2.jpg" alt=""></div>
+                                <div class="img">
+                                    <img width="100%" height="100%" src="./assets/images/playlist/playlist-2.jpg"
+                                        alt="" />
+                                </div>
                                 <div class="actions-container">
                                     <div class="carousel-icon">
                                         <i class="fa-regular fa-heart"></i>
-                                        <span>Thêm vào thư viện</span>
+                                        <div class="tool-tip">Thêm vào thư viện</div>
                                     </div>
                                     <div class="play-video">
                                         <i class="fa-solid fa-play"></i>
                                     </div>
                                     <div class="carousel-icon">
                                         <i class="fa-solid fa-ellipsis"></i>
-                                        <span>Khác</span>
+                                        <div class="tool-tip">Khác</div>
                                     </div>
                                 </div>
                             </div>
-                            <p class="desc">Mùi hoa sữa, cốm non và con đường ngập lá vàng</p>
+                            <p class="desc">
+                                Mùi hoa sữa, cốm non và con đường ngập lá
+                                vàng
+                            </p>
                         </div>
                         <div class="carousel-item">
                             <div class="card-item">
-                                <div class="img"><img width="100%" height="100%" src="./assets/images/playlist/playlist-3.jpg" alt=""></div>
+                                <div class="img">
+                                    <img width="100%" height="100%" src="./assets/images/playlist/playlist-3.jpg"
+                                        alt="" />
+                                </div>
                                 <div class="actions-container">
                                     <div class="carousel-icon">
                                         <i class="fa-regular fa-heart"></i>
-                                        <span>Thêm vào thư viện</span>
+                                        <div class="tool-tip">Thêm vào thư viện</div>
                                     </div>
                                     <div class="play-video">
                                         <i class="fa-solid fa-play"></i>
                                     </div>
                                     <div class="carousel-icon">
                                         <i class="fa-solid fa-ellipsis"></i>
-                                        <span>Khác</span>
+                                        <div class="tool-tip">Khác</div>
                                     </div>
                                 </div>
                             </div>
-                            <p class="desc">Lắng nghe những dịu dàng của mùa thu</p>
+                            <p class="desc">
+                                Lắng nghe những dịu dàng của mùa thu
+                            </p>
                         </div>
                         <div class="carousel-item">
                             <div class="card-item">
-                                <div class="img"><img width="100%" height="100%" src="./assets/images/playlist/playlist-4.jpg" alt=""></div>
+                                <div class="img">
+                                    <img width="100%" height="100%" src="./assets/images/playlist/playlist-4.jpg"
+                                        alt="" />
+                                </div>
                                 <div class="actions-container">
                                     <div class="carousel-icon">
                                         <i class="fa-regular fa-heart"></i>
-                                        <span>Thêm vào thư viện</span>
+                                        <div class="tool-tip">Thêm vào thư viện</div>
                                     </div>
                                     <div class="play-video">
                                         <i class="fa-solid fa-play"></i>
                                     </div>
                                     <div class="carousel-icon">
                                         <i class="fa-solid fa-ellipsis"></i>
-                                        <span>Khác</span>
+                                        <div class="tool-tip">Khác</div>
                                     </div>
                                 </div>
                             </div>
-                            <p class="desc">Luyến lưu những kỉ niệm mùa ta yêu nhau</p>
+                            <p class="desc">
+                                Luyến lưu những kỉ niệm mùa ta yêu nhau
+                            </p>
                         </div>
                         <div class="carousel-item">
                             <div class="card-item">
-                                <div class="img"><img width="100%" height="100%" src="./assets/images/playlist/playlist-5.jpg" alt=""></div>
+                                <div class="img">
+                                    <img width="100%" height="100%" src="./assets/images/playlist/playlist-5.jpg"
+                                        alt="" />
+                                </div>
                                 <div class="actions-container">
                                     <div class="carousel-icon">
                                         <i class="fa-regular fa-heart"></i>
-                                        <span>Thêm vào thư viện</span>
+                                        <div class="tool-tip">Thêm vào thư viện</div>
                                     </div>
                                     <div class="play-video">
                                         <i class="fa-solid fa-play"></i>
                                     </div>
                                     <div class="carousel-icon">
                                         <i class="fa-solid fa-ellipsis"></i>
-                                        <span>Khác</span>
+                                        <div class="tool-tip">Khác</div>
                                     </div>
                                 </div>
                             </div>
-                            <p class="desc">Sắc thu ngọt ngào hơn cùng nhạc acoustic</p>
+                            <p class="desc">
+                                Sắc thu ngọt ngào hơn cùng nhạc acoustic
+                            </p>
                         </div>
                     </div>
                 </section>
-                <!-- End Play List 1 -->
+                <!-- End Playlist -->
 
+                <!-- Playlist 2 -->
+                <section class="playlist">
+                    <div class="section-title">
+                        <h3 class="title">Chill</h3>
+                        <a href="#!" class="discovery-btn">Tất cả
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+                    </div>
+                    <div class="carousel-wrapper">
+                        <div class="carousel-item">
+                            <div class="card-item">
+                                <div class="img"><img width="100%" height="100%"
+                                        src="./assets/images/playlist/playlist-1.jpg" alt=""></div>
+                                <div class="actions-container">
+                                    <div class="carousel-icon">
+                                        <i class="fa-regular fa-heart"></i>
+                                        <div class="tool-tip">Thêm vào thư viện</div>
+                                    </div>
+                                    <div class="play-video">
+                                        <i class="fa-solid fa-play"></i>
+                                    </div>
+                                    <div class="carousel-icon">
+                                        <i class="fa-solid fa-ellipsis"></i>
+                                        <div class="tool-tip">Khác</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="desc">Ngốc à, mình chỉ iu mỗi mình cậu mà thôiiiiiiii</p>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="card-item">
+                                <div class="img"><img width="100%" height="100%"
+                                        src="./assets/images/playlist/playlist-2.jpg" alt=""></div>
+                                <div class="actions-container">
+                                    <div class="carousel-icon">
+                                        <i class="fa-regular fa-heart"></i>
+                                        <div class="tool-tip">Thêm vào thư viện</div>
+                                    </div>
+                                    <div class="play-video">
+                                        <i class="fa-solid fa-play"></i>
+                                    </div>
+                                    <div class="carousel-icon">
+                                        <i class="fa-solid fa-ellipsis"></i>
+                                        <div class="tool-tip">Khác</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="desc">Alo alo đây là tổng đài nhạc chill, chúc bạn có một buổi</p>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="card-item">
+                                <div class="img"><img width="100%" height="100%"
+                                        src="./assets/images/playlist/playlist-3.jpg" alt=""></div>
+                                <div class="actions-container">
+                                    <div class="carousel-icon">
+                                        <i class="fa-regular fa-heart"></i>
+                                        <div class="tool-tip">Thêm vào thư viện</div>
+                                    </div>
+                                    <div class="play-video">
+                                        <i class="fa-solid fa-play"></i>
+                                    </div>
+                                    <div class="carousel-icon">
+                                        <i class="fa-solid fa-ellipsis"></i>
+                                        <div class="tool-tip">Khác</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="desc">Indie Việt và những thanh âm Lofi cực chill</p>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="card-item">
+                                <div class="img"><img width="100%" height="100%"
+                                        src="./assets/images/playlist/playlist-4.jpg" alt=""></div>
+                                <div class="actions-container">
+                                    <div class="carousel-icon">
+                                        <i class="fa-regular fa-heart"></i>
+                                        <div class="tool-tip">Thêm vào thư viện</div>
+                                    </div>
+                                    <div class="play-video">
+                                        <i class="fa-solid fa-play"></i>
+                                    </div>
+                                    <div class="carousel-icon">
+                                        <i class="fa-solid fa-ellipsis"></i>
+                                        <div class="tool-tip">Khác</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="desc">Khi bạn cần giai điệu để xoa dịu những tổn thương đã qua</p>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="card-item">
+                                <div class="img"><img width="100%" height="100%"
+                                        src="./assets/images/playlist/playlist-5.jpg" alt=""></div>
+                                <div class="actions-container">
+                                    <div class="carousel-icon">
+                                        <i class="fa-regular fa-heart"></i>
+                                        <div class="tool-tip">Thêm vào thư viện</div>
+                                    </div>
+                                    <div class="play-video">
+                                        <i class="fa-solid fa-play"></i>
+                                    </div>
+                                    <div class="carousel-icon">
+                                        <i class="fa-solid fa-ellipsis"></i>
+                                        <div class="tool-tip">Khác</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="desc">Nâng niu đôi tai cùng R&B Việt</p>
+                        </div>
+                    </div>
+                </section>
+                <!-- End Playlist 2 -->
+
+                <!-- Playlist 3 -->
+                <section class="playlist">
+                    <div class="section-title">
+                        <h3 class="title">Nghe Là Yêu Đời</h3>
+                    </div>
+                    <div class="carousel-wrapper">
+                        <div class="carousel-item">
+                            <div class="card-item">
+                                <div class="img"><img width="100%" height="100%"
+                                        src="./assets/images/playlist/playlist-1.jpg" alt=""></div>
+                                <div class="actions-container">
+                                    <div class="carousel-icon">
+                                        <i class="fa-regular fa-heart"></i>
+                                        <div class="tool-tip">Thêm vào thư viện</div>
+                                    </div>
+                                    <div class="play-video">
+                                        <i class="fa-solid fa-play"></i>
+                                    </div>
+                                    <div class="carousel-icon">
+                                        <i class="fa-solid fa-ellipsis"></i>
+                                        <div class="tool-tip">Khác</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="desc">Mỗi ngày ra đường là một ngày slay</p>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="card-item">
+                                <div class="img"><img width="100%" height="100%"
+                                        src="./assets/images/playlist/playlist-2.jpg" alt=""></div>
+                                <div class="actions-container">
+                                    <div class="carousel-icon">
+                                        <i class="fa-regular fa-heart"></i>
+                                        <div class="tool-tip">Thêm vào thư viện</div>
+                                    </div>
+                                    <div class="play-video">
+                                        <i class="fa-solid fa-play"></i>
+                                    </div>
+                                    <div class="carousel-icon">
+                                        <i class="fa-solid fa-ellipsis"></i>
+                                        <div class="tool-tip">Khác</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="desc">Tình yêu là gì ấy nhỉ, hình như là "tụi mình" đó</p>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="card-item">
+                                <div class="img"><img width="100%" height="100%"
+                                        src="./assets/images/playlist/playlist-3.jpg" alt=""></div>
+                                <div class="actions-container">
+                                    <div class="carousel-icon">
+                                        <i class="fa-regular fa-heart"></i>
+                                        <div class="tool-tip">Thêm vào thư viện</div>
+                                    </div>
+                                    <div class="play-video">
+                                        <i class="fa-solid fa-play"></i>
+                                    </div>
+                                    <div class="carousel-icon">
+                                        <i class="fa-solid fa-ellipsis"></i>
+                                        <div class="tool-tip">Khác</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="desc">Yêu đời hẳn ra cùng V-Pop Speed Up cực cuốn</p>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="card-item">
+                                <div class="img"><img width="100%" height="100%"
+                                        src="./assets/images/playlist/playlist-4.jpg" alt=""></div>
+                                <div class="actions-container">
+                                    <div class="carousel-icon">
+                                        <i class="fa-regular fa-heart"></i>
+                                        <div class="tool-tip">Thêm vào thư viện</div>
+                                    </div>
+                                    <div class="play-video">
+                                        <i class="fa-solid fa-play"></i>
+                                    </div>
+                                    <div class="carousel-icon">
+                                        <i class="fa-solid fa-ellipsis"></i>
+                                        <div class="tool-tip">Khác</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="desc">Nghe vào đảm bảo vui muốn xíu</p>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="card-item">
+                                <div class="img"><img width="100%" height="100%"
+                                        src="./assets/images/playlist/playlist-5.jpg" alt=""></div>
+                                <div class="actions-container">
+                                    <div class="carousel-icon">
+                                        <i class="fa-regular fa-heart"></i>
+                                        <div class="tool-tip">Thêm vào thư viện</div>
+                                    </div>
+                                    <div class="play-video">
+                                        <i class="fa-solid fa-play"></i>
+                                    </div>
+                                    <div class="carousel-icon">
+                                        <i class="fa-solid fa-ellipsis"></i>
+                                        <div class="tool-tip">Khác</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="desc">Nhịp tim như chao đảo khi lọt hố tình yêu</p>
+                        </div>
+                    </div>
+                </section>
+                <!-- End Playlist 3-->
+
+                <!-- Partner -->
+                <section class="partner">
+                    <h3 class="title">Đối tác âm nhạc</h3>
+                    <div class="list-partner">
+                        <div class="item-partner">
+                            <img src="./assets/images/partner/partner-1.png" alt="">
+                        </div>
+                        <div class="item-partner">
+                            <img src="./assets/images/partner/partner-1.png" alt="">
+                        </div>
+                        <div class="item-partner">
+                            <img src="./assets/images/partner/partner-1.png" alt="">
+                        </div>
+                        <div class="item-partner">
+                            <img src="./assets/images/partner/partner-1.png" alt="">
+                        </div>
+                        <div class="item-partner">
+                            <img src="./assets/images/partner/partner-1.png" alt="">
+                        </div>
+                        <div class="item-partner">
+                            <img src="./assets/images/partner/partner-1.png" alt="">
+                        </div>
+                        <div class="item-partner">
+                            <img src="./assets/images/partner/partner-1.png" alt="">
+                        </div>
+                        <div class="item-partner">
+                            <img src="./assets/images/partner/partner-1.png" alt="">
+                        </div>
+                        <div class="item-partner">
+                            <img src="./assets/images/partner/partner-1.png" alt="">
+                        </div>
+                        <div class="item-partner">
+                            <img src="./assets/images/partner/partner-1.png" alt="">
+                        </div>
+                        <div class="item-partner">
+                            <img src="./assets/images/partner/partner-1.png" alt="">
+                        </div>
+                        <div class="item-partner">
+                            <img src="./assets/images/partner/partner-1.png" alt="">
+                        </div>
+                        <div class="item-partner">
+                            <img src="./assets/images/partner/partner-1.png" alt="">
+                        </div>
+                        <div class="item-partner">
+                            <img src="./assets/images/partner/partner-1.png" alt="">
+                        </div>
+                        <div class="item-partner">
+                            <img src="./assets/images/partner/partner-1.png" alt="">
+                        </div>
+                        <div class="item-partner">
+                            <img src="./assets/images/partner/partner-1.png" alt="">
+                        </div>
+                    </div>
+                </section>
+                <!-- End Partner -->
             </main>
             <!-- End Main-->
         </div>
