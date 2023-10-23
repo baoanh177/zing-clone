@@ -535,13 +535,6 @@ body::-webkit-scrollbar {
   border-radius: 4px;
   background-color: hsla(0, 0%, 100%, 0.3);
 }
-.player-model .progress-bar:hover {
-  cursor: pointer;
-  height: 5px;
-}
-.player-model .progress-bar:hover .progress .dot {
-  opacity: 1;
-}
 .player-model .progress-bar .progress {
   position: relative;
   width: 50%;
@@ -663,14 +656,15 @@ body::-webkit-scrollbar {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 45px;
-  height: 45px;
+  width: 40px;
+  height: 40px;
   cursor: pointer;
   border-radius: 50%;
   border: 1px solid #fff;
 }
 .player .controls .play-toggle i {
   font-size: 20px;
+  margin-left: 2px;
 }
 .player .controls .play-toggle:hover {
   color: #9b4de0;
@@ -741,8 +735,8 @@ body::-webkit-scrollbar {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 36px;
-  height: 36px;
+  width: 32px;
+  height: 32px;
   font-size: 1.6rem;
   border-radius: 50%;
   cursor: pointer;
@@ -760,6 +754,15 @@ body::-webkit-scrollbar {
   display: flex;
   align-items: center;
 }
+.player-actions .volume:hover {
+  cursor: pointer;
+}
+.player-actions .volume:hover .progress-bar {
+  height: 5px;
+}
+.player-actions .volume:hover .progress .dot {
+  opacity: 1;
+}
 .player-actions .divide {
   width: 1px;
   height: 33px;
@@ -770,8 +773,9 @@ body::-webkit-scrollbar {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 36px;
-  height: 36px;
+  width: 32px;
+  height: 32px;
+  margin: 0 2px;
   border-radius: 50%;
   color: #fff;
   cursor: pointer;
@@ -973,14 +977,15 @@ body::-webkit-scrollbar {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 45px;
-  height: 45px;
+  width: 40px;
+  height: 40px;
   cursor: pointer;
   border-radius: 50%;
   border: 1px solid #fff;
 }
 .recently .carousel-wrapper .carousel-item .card-item .actions-container .play-video i {
   font-size: 20px;
+  margin-left: 2px;
 }
 .recently .carousel-wrapper .carousel-item .card-item .actions-container .play-video:hover {
   filter: brightness(0.9);
@@ -1117,14 +1122,15 @@ body::-webkit-scrollbar {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 45px;
-  height: 45px;
+  width: 40px;
+  height: 40px;
   cursor: pointer;
   border-radius: 50%;
   border: 1px solid #fff;
 }
 .recommend .recommend-inner .recommend-list .recommend-item .recommend-thumb .icon-list .play-music i {
   font-size: 20px;
+  margin-left: 2px;
 }
 .recommend .recommend-inner .recommend-list .recommend-item .recommend-thumb .icon-list .play-music:hover {
   filter: brightness(0.9);
@@ -1413,14 +1419,15 @@ body::-webkit-scrollbar {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 45px;
-  height: 45px;
+  width: 40px;
+  height: 40px;
   cursor: pointer;
   border-radius: 50%;
   border: 1px solid #fff;
 }
 .playlist .carousel-wrapper .carousel-item .card-item .actions-container .play-video i {
   font-size: 20px;
+  margin-left: 2px;
 }
 .playlist .carousel-wrapper .carousel-item .card-item .actions-container .play-video:hover {
   filter: brightness(0.9);
@@ -1540,14 +1547,13 @@ body::-webkit-scrollbar {
 .new-songs-rank .heading .discovery-btn:hover {
   color: #c273ed;
 }
-
-.box {
+.new-songs-rank .box {
   position: relative;
   margin: 0 -14px;
   overflow: hidden;
 }
-.box .prev-btn,
-.box .next-btn {
+.new-songs-rank .box .prev-btn,
+.new-songs-rank .box .next-btn {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1564,21 +1570,20 @@ body::-webkit-scrollbar {
   color: #000;
   background-color: #fff;
 }
-.box .prev-btn:hover,
-.box .next-btn:hover {
+.new-songs-rank .box .prev-btn:hover,
+.new-songs-rank .box .next-btn:hover {
   filter: brightness(0.9);
 }
-.box .next-btn {
+.new-songs-rank .box .next-btn {
   right: 0px;
 }
-.box .inner {
+.new-songs-rank .box .inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
 }
-
-.inner .item {
+.new-songs-rank .inner .item {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -1589,21 +1594,19 @@ body::-webkit-scrollbar {
   border-radius: 5px;
   background-color: hsla(0, 0%, 100%, 0.1);
 }
-.inner .item img {
+.new-songs-rank .thumb {
   width: 120px;
   height: 120px;
   border-radius: 4px;
-}
-
-.thumb .image {
   position: relative;
   overflow: hidden;
-  cursor: pointer;
 }
-.thumb .image img {
+.new-songs-rank .thumb img {
+  width: 100%;
+  height: 100%;
   transition: transform 0.7s ease;
 }
-.thumb .image .icon-list {
+.new-songs-rank .thumb .icon-list {
   position: absolute;
   display: flex;
   align-items: center;
@@ -1613,64 +1616,68 @@ body::-webkit-scrollbar {
   visibility: hidden;
   background-color: rgba(0, 0, 0, 0.3411764706);
 }
-.thumb .image .icon-list .play-icon {
+.new-songs-rank .thumb .icon-list .play-icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 45px;
-  height: 45px;
+  width: 40px;
+  height: 40px;
   cursor: pointer;
   border-radius: 50%;
   border: 1px solid #fff;
 }
-.thumb .image .icon-list .play-icon i {
+.new-songs-rank .thumb .icon-list .play-icon i {
   font-size: 20px;
+  margin-left: 2px;
 }
-.thumb .image .icon-list .play-icon:hover {
+.new-songs-rank .thumb .icon-list .play-icon:hover {
   filter: brightness(0.9);
 }
-.thumb:hover img {
-  transform: scale(1.2);
+.new-songs-rank .thumb:hover img {
+  transform: scale(1.1);
 }
-.thumb:hover .icon-list {
+.new-songs-rank .thumb:hover .icon-list {
   opacity: 1;
   visibility: visible;
 }
-
-.item .info {
+.new-songs-rank .item {
+  display: flex;
+  cursor: pointer;
+}
+.new-songs-rank .item .info {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 100%;
+  flex-grow: 1;
   height: 120px;
 }
-.item .info .top-info {
+.new-songs-rank .item .info .top-info {
   display: flex;
   justify-content: center;
   flex-direction: column;
   gap: 3px;
 }
-.item .info .top-info h4.name {
+.new-songs-rank .item .info .top-info h4.name {
   font-size: 14px;
   line-height: 1.3;
   font-weight: 500;
 }
-.item .info .top-info a.single {
+.new-songs-rank .item .info .top-info a.single {
   margin-top: 3px;
   font-size: 12px;
   font-weight: 400;
   color: hsla(0, 0%, 100%, 0.5);
 }
-.item .info .top-info a.single:hover {
+.new-songs-rank .item .info .top-info a.single:hover {
   color: #c273ed;
   text-decoration: underline;
 }
-.item .info .bot-info {
+.new-songs-rank .item .info .bot-info {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-.item .info .bot-info .rank {
+.new-songs-rank .item .info .bot-info .rank {
   font-size: 40px;
   font-weight: 900;
   opacity: 0.4;
@@ -1678,7 +1685,7 @@ body::-webkit-scrollbar {
   color: transparent;
   font-family: "Roboto", sans-serif;
 }
-.item .info .bot-info .release-day {
+.new-songs-rank .item .info .bot-info .release-day {
   display: flex;
   align-items: end;
   font-size: 14px;

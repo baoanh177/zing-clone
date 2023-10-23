@@ -5,133 +5,134 @@
     .heading {
         @include section-title;
     }
-}
 
-.box {
-    position: relative;
-    margin: 0 -14px;
-    overflow: hidden;
-    .prev-btn,
-    .next-btn {
-        @include center(all);
-        @include equal-sides(38px);
-        position: absolute;
-        font-size: 14px;
-        top: 50%;
-        translate: 0 -50%;
-        z-index: 3;
-        cursor: pointer;
-        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
-        border-radius: 50%;
-        color: #000;
-        background-color: $white;
-        &:hover {
-            filter: brightness(0.9);
+    .box {
+        position: relative;
+        margin: 0 -14px;
+        overflow: hidden;
+        .prev-btn,
+        .next-btn {
+            @include center(all);
+            @include equal-sides(38px);
+            position: absolute;
+            font-size: 14px;
+            top: 50%;
+            translate: 0 -50%;
+            z-index: 3;
+            cursor: pointer;
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+            border-radius: 50%;
+            color: #000;
+            background-color: $white;
+            &:hover {
+                filter: brightness(0.9);
+            }
+        }
+        .next-btn {
+            right: 0px;
+        }
+        .inner {
+            @include center(cross);
+            justify-content: space-between;
+            width: 100%;
         }
     }
-    .next-btn {
-        right: 0px;
-    }
-    .inner {
+    
+    .inner .item {
         @include center(cross);
-        justify-content: space-between;
+        gap: 8px;
         width: 100%;
+        height: auto;
+        margin: 0 14px;
+        padding: 10px;
+        border-radius: 5px;
+        background-color: hsla(0, 0%, 100%, 0.1);
     }
-}
-
-.inner .item {
-    @include center(cross);
-    gap: 8px;
-    width: 100%;
-    height: auto;
-    margin: 0 14px;
-    padding: 10px;
-    border-radius: 5px;
-    background-color: hsla(0, 0%, 100%, 0.1);
-    img {
+    
+    .thumb {
         @include equal-sides(120px);
         border-radius: 4px;
-    }
-}
-
-.thumb {
-    .image {
         position: relative;
         overflow: hidden;
-        cursor: pointer;
-        img {
-            transition: transform 0.7s ease;
-        }
-        .icon-list {
-            position: absolute;
-            @include center(all);
-            inset: 0;
-            opacity: 0;
-            visibility: hidden;
-            background-color: rgba(0, 0, 0, 0.3411764706);
-            .play-icon {
-                @include play-icon(secondary);
+            img {
+                width: 100%;
+                height: 100%;
+                transition: transform 0.7s ease;
+            }
+            .icon-list {
+                position: absolute;
+                @include center(all);
+                inset: 0;
+                opacity: 0;
+                visibility: hidden;
+                background-color: rgba(0, 0, 0, 0.3411764706);
+                .play-icon {
+                    @include play-icon(secondary);
+                }
+            }
+        &:hover {
+            img {
+                transform: scale(1.1);
+            }
+            .icon-list {
+                opacity: 1;
+                visibility: visible;
             }
         }
     }
-    &:hover {
-        img {
-            transform: scale(1.2);
-        }
-        .icon-list {
-            opacity: 1;
-            visibility: visible;
-        }
-    }
-}
-
-.item {
-    .info {
+    
+    .item {
         display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        width: 100%;
-        height: 120px;
-        .top-info {
-            @include center(main);
+        cursor: pointer;
+        .info {
+            display: flex;
             flex-direction: column;
-            gap: 3px;
-            // text-align: left;
-            h4.name {
-                font-size: 14px;
-                line-height: 1.3;
-                font-weight: 500;
+            justify-content: space-between;
+            flex-grow: 1;
+            height: 120px;
+            .top-info {
+                @include center(main);
+                flex-direction: column;
+                gap: 3px;
+                // text-align: left;
+                h4.name {
+                    font-size: 14px;
+                    line-height: 1.3;
+                    font-weight: 500;
+                }
+                a.single {
+                    margin-top: 3px;
+                    font-size: 12px;
+                    font-weight: 400;
+                    color: $text-secondary;
+                    &:hover {
+                        color: $link-text-hover;
+                        text-decoration: underline;
+                    }
+                }
             }
-            a.single {
-                margin-top: 3px;
-                font-size: 12px;
-                font-weight: 400;
-                color: $text-secondary;
-                &:hover {
-                    color: $link-text-hover;
-                    text-decoration: underline;
+    
+            .bot-info {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                .rank {
+                    font-size: 40px;
+                    font-weight: 900;
+                    opacity: 0.4;
+                    -webkit-text-stroke: 1px $white;
+                    color: transparent;
+                    font-family: "Roboto", sans-serif;
+                }
+                .release-day {
+                    display: flex;
+                    align-items: end;
+                    font-size: 14px;
+                    color: $text-secondary;
                 }
             }
         }
-
-        .bot-info {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            .rank {
-                font-size: 40px;
-                font-weight: 900;
-                opacity: 0.4;
-                -webkit-text-stroke: 1px $white;
-                color: transparent;
-                font-family: "Roboto", sans-serif;
-            }
-            .release-day {
-                display: flex;
-                align-items: end;
-                font-size: 14px;
-                color: $text-secondary;
-            }
-        }
     }
 }
+
+
