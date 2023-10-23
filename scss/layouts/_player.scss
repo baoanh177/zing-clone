@@ -23,14 +23,6 @@
         height: 3px;
         border-radius: 4px;
         background-color: $progressbar-player-bg;
-        &:hover {
-            cursor: pointer;
-            height: 5px;
-
-            .progress .dot {
-                opacity: 1;
-            }
-        }
         .progress {
             position: relative;
             width: 50%;
@@ -157,7 +149,7 @@
     }
     .icon {
         @include center(all);
-        @include equal-sides(36px);
+        @include equal-sides(32px);
         font-size: 1.6rem;
         border-radius: 50%;
         @include icon-hover();
@@ -168,6 +160,16 @@
     @include center(cross);
     .volume {
         @include center(cross);
+        &:hover {
+            cursor: pointer;
+            .progress-bar {
+                height: 5px;
+            }
+
+            .progress .dot {
+                opacity: 1;
+            }
+        }
     }
     .divide {
         width: 1px;
@@ -177,7 +179,8 @@
     }
     .icon {
         @include center(all);
-        @include equal-sides(36px);
+        @include equal-sides(32px);
+        margin: 0 2px;
         border-radius: 50%;
         color: $white;
         @include icon-hover();
