@@ -1,0 +1,200 @@
+.zingchart {
+    position: relative;
+    margin-top: 48px;
+    border-radius: 8px;
+    color: $white;
+    overflow: hidden;
+    .bg-blur {
+        position: absolute;
+        inset: 0;
+        background-color: #2b273f;
+    }
+    .bg-alpha {
+        position: absolute;
+        inset: 0;
+        background-color: rgba(51,16,76,.95);
+        .bg-alpha-top {
+            &::before {
+                content: "";
+                position: absolute;
+                width: 230px;
+                height: 143.18px;
+                -webkit-filter: blur(150px);
+                filter: blur(150px);
+                border-radius: 115px;
+                transform: rotate(30deg);
+                background: #ba53f5;
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                width: 230px;
+                height: 143.18px;
+                -webkit-filter: blur(150px);
+                filter: blur(150px);
+                border-radius: 115px;
+                transform: rotate(30deg);
+                background: #ba53f5;
+            }
+        }
+        .bg-alpha-bottom {
+            &::after {
+                content: "";
+                position: absolute;
+                left: 60%;
+                right: 0;
+                top: -100px;
+                height: 250px;
+                background: #ba53f5;
+                -webkit-filter: blur(230px);
+                filter: blur(230px);
+            }
+        }
+    }
+    .content {
+        position: relative;
+        inset: 0;
+        margin-bottom: 20px;
+        .inner {
+            display: flex;
+            padding: 20px;
+            .song-rank {
+                width: 42.6%;
+                .heading {
+                    @include center(cross);
+                    gap: 10px;
+                    font-size: 2.8rem;
+                    font-weight: 700;
+                    color: $white;
+                    .play-icon {
+                        font-size: 2.3rem;
+                    }
+                    .title {
+                        background: radial-gradient(50% 124.93% at 95.86% -10%,#3efad9 0,hsla(0,0%,100%,0) 100%),linear-gradient(91.56deg,#ff9357 1.54%,#9100ff 98.71%);
+                        background-clip: text;
+                        -webkit-background-clip: text;
+                        color: transparent;
+                    }
+                }
+                .rank-list {
+                    margin-top: 20px;
+                    padding: 0 14px;
+                }
+                .btn-wrapper {
+                    text-align: center;
+                    .see-more-btn {
+                        display: inline-block;
+                        font-size: 1.4rem;
+                        line-height: 21px;
+                        padding: 5px 25px;
+                        border: 1px solid $white;
+                        border-radius: 999px;
+                        background-color: transparent;
+                    }
+                }
+            }
+        }
+    }
+    .song-item {
+        @include center(cross);
+        width: 100%;
+        padding: 10px 15px;
+        margin-bottom: 10px;
+        border-radius: 4px;
+        background-color: hsla(0,0%,100%,.07);
+        transition: background-color 0.2s;
+        &:hover {
+            background-color: hsla(0,0%,100%,.2);
+            .song .thumb .play-icon {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+        .rank-number {
+            font-family: roboto;
+            font-size: 3.2rem;
+            font-weight: 900;
+            line-height: 1;
+            color: rgba(74,144,226,0);
+            &.first {
+                -webkit-text-stroke: 1px #4a90e2;
+            }
+            &.seccond {
+                -webkit-text-stroke: 1px #50e3c2;
+            }
+            &.third {
+                -webkit-text-stroke: 1px #e35050;
+            }
+        }
+        .song {
+            @include center(cross);
+            flex-grow: 1;
+            gap: 10px;
+            margin-left: 15px;
+
+            .thumb {
+                position: relative;
+                @include equal-sides(60px);
+                border-radius: 4px;
+                overflow: hidden;
+                img {
+                    @include equal-sides(100%);
+                }
+                .play-icon {
+                    @include center(all);
+                    position: absolute;
+                    inset: 0;
+                    font-size: 1.8rem;
+                    background-color: rgba(0,0,0,0.5);
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: opacity 0.2s, visibility 0.2s;
+                }
+            }
+            .info {
+                .song-name {
+                    @include ellipsis-overflow();
+                    line-height: 1.3;
+                    font-size: 1.4rem;
+                    font-weight: 500;
+                }
+                .author {
+                    font-size: 1.2rem;
+                    color: hsla(0,0%,100%,.5);
+                    a {
+                        &:hover {
+                            color: $link-text-hover;
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+        .precent {
+            margin-left: 10px;
+            font-weight: 700;
+            font-size: 1.6rem;
+            line-height: 1.56;
+        }
+    }
+}
+
+
+// Chart
+
+// #_ABSTRACT_RENDERER_ID_0 + rect {
+//     display: none;
+// }
+
+// #_ABSTRACT_RENDERER_ID_0 + rect + g,
+// #_ABSTRACT_RENDERER_ID_0 + rect + g + g{
+//     display: none;
+// }
+
+// text {
+//     fill: #bbb;
+// }
+
+// #_ABSTRACT_RENDERER_ID_0 + rect + g + g + g > rect + g + g + g > g:nth-child(12) ~ * {
+//     display: none;
+// }
