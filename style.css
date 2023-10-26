@@ -147,6 +147,11 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: inherit;
 }
 
+img {
+  display: block;
+  width: 100%;
+}
+
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
@@ -1510,6 +1515,208 @@ body::-webkit-scrollbar {
 .partner .list-partner .item-partner img {
   max-width: 90%;
   max-height: 80%;
+}
+
+.zingchart {
+  position: relative;
+  margin-top: 48px;
+  border-radius: 8px;
+  color: #fff;
+  overflow: hidden;
+}
+.zingchart .bg-blur {
+  position: absolute;
+  inset: 0;
+  background-color: #2b273f;
+}
+.zingchart .bg-alpha {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(51, 16, 76, 0.95);
+}
+.zingchart .bg-alpha .bg-alpha-top::before {
+  content: "";
+  position: absolute;
+  width: 230px;
+  height: 143.18px;
+  -webkit-filter: blur(150px);
+  filter: blur(150px);
+  border-radius: 115px;
+  transform: rotate(30deg);
+  background: #ba53f5;
+}
+.zingchart .bg-alpha .bg-alpha-top::after {
+  content: "";
+  position: absolute;
+  width: 230px;
+  height: 143.18px;
+  -webkit-filter: blur(150px);
+  filter: blur(150px);
+  border-radius: 115px;
+  transform: rotate(30deg);
+  background: #ba53f5;
+}
+.zingchart .bg-alpha .bg-alpha-bottom::after {
+  content: "";
+  position: absolute;
+  left: 60%;
+  right: 0;
+  top: -100px;
+  height: 250px;
+  background: #ba53f5;
+  -webkit-filter: blur(230px);
+  filter: blur(230px);
+}
+.zingchart .content {
+  position: relative;
+  inset: 0;
+  margin-bottom: 20px;
+}
+.zingchart .content .inner {
+  display: flex;
+  padding: 20px;
+}
+.zingchart .content .inner .song-rank {
+  width: 42.6%;
+}
+.zingchart .content .inner .song-rank .heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #fff;
+}
+.zingchart .content .inner .song-rank .heading .play-icon {
+  font-size: 2.3rem;
+}
+.zingchart .content .inner .song-rank .heading .title {
+  background: radial-gradient(50% 124.93% at 95.86% -10%, #3efad9 0, hsla(0, 0%, 100%, 0) 100%), linear-gradient(91.56deg, #ff9357 1.54%, #9100ff 98.71%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.zingchart .content .inner .song-rank .rank-list {
+  margin-top: 20px;
+  padding: 0 14px;
+}
+.zingchart .content .inner .song-rank .btn-wrapper {
+  text-align: center;
+}
+.zingchart .content .inner .song-rank .btn-wrapper .see-more-btn {
+  display: inline-block;
+  font-size: 1.4rem;
+  line-height: 21px;
+  padding: 5px 25px;
+  border: 1px solid #fff;
+  border-radius: 999px;
+  background-color: transparent;
+}
+.zingchart .song-item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  background-color: hsla(0, 0%, 100%, 0.07);
+  transition: background-color 0.2s;
+}
+.zingchart .song-item:hover {
+  background-color: hsla(0, 0%, 100%, 0.2);
+}
+.zingchart .song-item:hover .song .thumb .play-icon {
+  opacity: 1;
+  visibility: visible;
+}
+.zingchart .song-item .rank-number {
+  font-family: roboto;
+  font-size: 3.2rem;
+  font-weight: 900;
+  line-height: 1;
+  color: rgba(74, 144, 226, 0);
+}
+.zingchart .song-item .rank-number.first {
+  -webkit-text-stroke: 1px #4a90e2;
+}
+.zingchart .song-item .rank-number.seccond {
+  -webkit-text-stroke: 1px #50e3c2;
+}
+.zingchart .song-item .rank-number.third {
+  -webkit-text-stroke: 1px #e35050;
+}
+.zingchart .song-item .song {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  gap: 10px;
+  margin-left: 15px;
+}
+.zingchart .song-item .song .thumb {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.zingchart .song-item .song .thumb img {
+  width: 100%;
+  height: 100%;
+}
+.zingchart .song-item .song .thumb .play-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  inset: 0;
+  font-size: 1.8rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s, visibility 0.2s;
+}
+.zingchart .song-item .song .info .song-name {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 100%;
+  line-height: 1.3;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+.zingchart .song-item .song .info .author {
+  font-size: 1.2rem;
+  color: hsla(0, 0%, 100%, 0.5);
+}
+.zingchart .song-item .song .info .author a:hover {
+  color: #c273ed;
+  text-decoration: underline;
+}
+.zingchart .song-item .precent {
+  margin-left: 10px;
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 1.56;
+}
+
+.weekchart {
+  margin-top: 28px;
+  padding-top: 40px;
+}
+.weekchart .list {
+  display: flex;
+  gap: 28px;
+}
+.weekchart .list .item a {
+  display: block;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.weekchart .list .item a img {
+  transition: scale 0.7s;
+}
+.weekchart .list .item:hover img {
+  scale: 1.1;
 }
 
 .new-songs-rank {

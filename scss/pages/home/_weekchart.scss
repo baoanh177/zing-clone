@@ -1,0 +1,23 @@
+.weekchart {
+    margin-top: 28px;
+    padding-top: 40px;
+    .list {
+        display: flex;
+        gap: 28px;
+        .item {
+            a {
+                display: block;
+                border-radius: 4px;
+                overflow: hidden;
+                img {
+                    transition: scale .7s;
+                }
+            }
+            &:hover {
+                img {
+                    scale: 1.1;
+                }
+            }
+        }
+    }
+}
