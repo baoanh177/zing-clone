@@ -382,9 +382,7 @@ body::-webkit-scrollbar {
 }
 
 .sidebar-toggle {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: none;
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -430,6 +428,8 @@ body::-webkit-scrollbar {
   }
   .sidebar-toggle {
     display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 .wrapper {
@@ -986,7 +986,6 @@ body::-webkit-scrollbar {
 }
 .recently .carousel-wrapper .carousel-item {
   padding: 0px 14px;
-  width: 14.28571%;
 }
 .recently .carousel-wrapper .carousel-item .card-item {
   cursor: pointer;
@@ -1428,7 +1427,6 @@ body::-webkit-scrollbar {
 }
 .playlist .carousel-wrapper .carousel-item {
   padding: 0px 14px;
-  width: 14.28571%;
 }
 .playlist .carousel-wrapper .carousel-item .card-item {
   cursor: pointer;
