@@ -6,14 +6,14 @@
         &:hover {
             color: #fff;
             .play-icon {
-                display: block;
+                visibility: visible
             }
         }
         a {
             @include center(cross);
             gap: 12px;
             .play-icon {
-                display: none;
+                visibility: hidden;
                 margin-left: auto;
                 font-size: 1.8rem;
                 &:hover {
@@ -54,6 +54,7 @@
         font-weight: 500;
         color: #ddd;
         font-size: 1.4rem;
+        overflow: hidden
     }
 }
 
@@ -66,6 +67,9 @@
         img {
             width: 120px;
             height: 40px;
+        }
+        .logo-sm {
+            display: none;
         }
     }
 }
@@ -154,5 +158,75 @@
     background-color: $layout-background;
     i {
         font-size: 1.6rem;
+    }
+}
+
+.sidebar-toggle-wrap {
+    @include center(main);
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: $player-model-height;
+    padding-bottom: 10px;
+    width: $sidebar-width-sm;
+}
+
+.sidebar-toggle {
+    @include center(all);
+    @include equal-sides(40px);
+    border-radius: 50%;
+    color: #fff;
+    background-color: $alpha-bg;
+    cursor: pointer;
+}
+
+
+
+/// Responsive
+
+@include responsive(laptop-sm) {
+    .sidebar .sidebar-inner, .sidebar {
+        width: $sidebar-width-sm;
+    }
+
+    .sidebar-item .zing-logo img {
+        @include equal-sides(45px);
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .sidebar-item .zing-logo .logo-sm {
+        display: block;
+    }
+
+    .sidebar nav .item span {
+        display: none;
+    }
+
+    .vip-sidebar-banner {
+        display: none;
+    }
+
+    .navbar-sub .scroll-menu .library-personal {
+        padding-top: 32px;
+    }
+
+    .sidebar-item {
+        @include center(all);
+        padding: 0;
+    }
+
+    .sidebar .item a .play-icon {
+        display: none;
+    }
+
+    .create-playlist-btn {
+        display: none;
+    }
+
+    .sidebar-toggle {
+        display: flex;
     }
 }
