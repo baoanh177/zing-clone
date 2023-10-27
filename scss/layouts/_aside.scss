@@ -172,7 +172,7 @@
 }
 
 .sidebar-toggle {
-    @include center(all);
+    display: none;
     @include equal-sides(40px);
     border-radius: 50%;
     color: #fff;
@@ -227,6 +227,6 @@
     }
 
     .sidebar-toggle {
-        display: flex;
+        @include center(all);
     }
 }
