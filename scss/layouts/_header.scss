@@ -13,8 +13,8 @@
     color: #d8d8d8dd;
     position: fixed;
     top: 0px;
-    left: 15.625%;
     right: 0px;
+    left: $sidebar-width;
     z-index: 100;
     &::after {
         content: "";
@@ -33,6 +33,7 @@
 
 .left-header {
     @include center(cross);
+    flex-grow: 1;
     .actions {
         display: flex;
         font-size: 2.2rem;
@@ -41,9 +42,11 @@
         }
     }
     .search-box {
+        position: relative;
         @include center(cross);
         padding-right: 10px;
-        width: 440px;
+        width: 100%;
+        max-width: 440px;
         height: 40px;
         overflow: hidden;
         border-radius: 20px;
@@ -76,6 +79,8 @@
     gap: 10px;
     .install-pc-version {
         @include center(cross);
+        flex-shrink: 0;
+        margin-left: 15px;
         padding: 10px 24px;
         border-radius: 99px;
         font-size: 1.4rem;
@@ -131,6 +136,7 @@
     }
     .header-btn {
         @include center(all);
+        flex-shrink: 0;
         border-radius: 50%;
         height: 38px;
         width: 38px;
@@ -142,5 +148,16 @@
         img {
             width: 100%;
         }
+    }
+}
+
+
+@include responsive(laptop-sm) {
+    .wrapper {
+        margin-left: $sidebar-width-sm;
+    }
+
+    .header {
+        left: $sidebar-width-sm;
     }
 }

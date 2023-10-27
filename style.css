@@ -201,6 +201,7 @@ body::-webkit-scrollbar {
   font-weight: 500;
   color: #ddd;
   font-size: 1.4rem;
+  overflow: hidden;
 }
 
 .sidebar-item {
@@ -215,6 +216,9 @@ body::-webkit-scrollbar {
 .sidebar-item .zing-logo img {
   width: 120px;
   height: 40px;
+}
+.sidebar-item .zing-logo .logo-sm {
+  display: none;
 }
 
 .navbar-main {
@@ -240,7 +244,7 @@ body::-webkit-scrollbar {
   color: #fff;
 }
 .navbar-main .item:hover .play-icon {
-  display: block;
+  visibility: visible;
 }
 .navbar-main .item a {
   display: flex;
@@ -248,7 +252,7 @@ body::-webkit-scrollbar {
   gap: 12px;
 }
 .navbar-main .item a .play-icon {
-  display: none;
+  visibility: hidden;
   margin-left: auto;
   font-size: 1.8rem;
 }
@@ -276,7 +280,7 @@ body::-webkit-scrollbar {
   color: #fff;
 }
 .navbar-sub .scroll-menu .menu .item:hover .play-icon {
-  display: block;
+  visibility: visible;
 }
 .navbar-sub .scroll-menu .menu .item a {
   display: flex;
@@ -284,7 +288,7 @@ body::-webkit-scrollbar {
   gap: 12px;
 }
 .navbar-sub .scroll-menu .menu .item a .play-icon {
-  display: none;
+  visibility: hidden;
   margin-left: auto;
   font-size: 1.8rem;
 }
@@ -303,7 +307,7 @@ body::-webkit-scrollbar {
   color: #fff;
 }
 .navbar-sub .scroll-menu .library-personal .item:hover .play-icon {
-  display: block;
+  visibility: visible;
 }
 .navbar-sub .scroll-menu .library-personal .item a {
   display: flex;
@@ -311,7 +315,7 @@ body::-webkit-scrollbar {
   gap: 12px;
 }
 .navbar-sub .scroll-menu .library-personal .item a .play-icon {
-  display: none;
+  visibility: hidden;
   margin-left: auto;
   font-size: 1.8rem;
 }
@@ -366,6 +370,68 @@ body::-webkit-scrollbar {
   font-size: 1.6rem;
 }
 
+.sidebar-toggle-wrap {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 90px;
+  padding-bottom: 10px;
+  width: 70px;
+}
+
+.sidebar-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: #fff;
+  background-color: hsla(0, 0%, 100%, 0.1);
+  cursor: pointer;
+}
+
+@media (max-width: 1024.98px) {
+  .sidebar .sidebar-inner, .sidebar {
+    width: 70px;
+  }
+  .sidebar-item .zing-logo img {
+    width: 45px;
+    height: 45px;
+  }
+  .logo {
+    display: none;
+  }
+  .sidebar-item .zing-logo .logo-sm {
+    display: block;
+  }
+  .sidebar nav .item span {
+    display: none;
+  }
+  .vip-sidebar-banner {
+    display: none;
+  }
+  .navbar-sub .scroll-menu .library-personal {
+    padding-top: 32px;
+  }
+  .sidebar-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
+  .sidebar .item a .play-icon {
+    display: none;
+  }
+  .create-playlist-btn {
+    display: none;
+  }
+  .sidebar-toggle {
+    display: flex;
+  }
+}
 .wrapper {
   margin-left: 240px;
   padding-top: 70px;
@@ -382,8 +448,8 @@ body::-webkit-scrollbar {
   color: rgba(216, 216, 216, 0.8666666667);
   position: fixed;
   top: 0px;
-  left: 15.625%;
   right: 0px;
+  left: 240px;
   z-index: 100;
 }
 .header::after {
@@ -403,6 +469,7 @@ body::-webkit-scrollbar {
 .left-header {
   display: flex;
   align-items: center;
+  flex-grow: 1;
 }
 .left-header .actions {
   display: flex;
@@ -412,10 +479,12 @@ body::-webkit-scrollbar {
   width: 44px;
 }
 .left-header .search-box {
+  position: relative;
   display: flex;
   align-items: center;
   padding-right: 10px;
-  width: 440px;
+  width: 100%;
+  max-width: 440px;
   height: 40px;
   overflow: hidden;
   border-radius: 20px;
@@ -452,6 +521,8 @@ body::-webkit-scrollbar {
 .right-header .install-pc-version {
   display: flex;
   align-items: center;
+  flex-shrink: 0;
+  margin-left: 15px;
   padding: 10px 24px;
   border-radius: 99px;
   font-size: 1.4rem;
@@ -507,6 +578,7 @@ body::-webkit-scrollbar {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
   border-radius: 50%;
   height: 38px;
   width: 38px;
@@ -520,6 +592,14 @@ body::-webkit-scrollbar {
   width: 100%;
 }
 
+@media (max-width: 1024.98px) {
+  .wrapper {
+    margin-left: 70px;
+  }
+  .header {
+    left: 70px;
+  }
+}
 .player-model {
   position: fixed;
   display: flex;
@@ -1788,7 +1868,6 @@ body::-webkit-scrollbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
 }
 .new-songs-rank .inner .item {
   display: flex;
