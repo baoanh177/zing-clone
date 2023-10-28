@@ -49,11 +49,11 @@
 }
 
 // ellipsis overflow
-@mixin ellipsis-overflow() {
+@mixin ellipsis-overflow($line: 1) {
+    -webkit-line-clamp: $line;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
-    max-width: 100%;
 }
 
 @mixin section-title {
