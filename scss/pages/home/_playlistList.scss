@@ -4,9 +4,18 @@
         @include section-title;
     }
     .carousel-wrapper {
-        min-width: 1146.8px;
+        @include responsive(laptop-sm) {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
         @include carousel-item;
         .carousel-item {
+            @include responsive(laptop-sm) {
+                width: inherit;
+                &:last-of-type {
+                    display: none;
+                }
+            }
             width: 20%;
         }
     }

@@ -1123,10 +1123,24 @@ body::-webkit-scrollbar {
   display: flex;
   margin: 20px -14px 0;
 }
+@media (max-width: 1024.98px) {
+  .recommend .recommend-inner .recommend-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
 .recommend .recommend-inner .recommend-list .recommend-item {
   width: 20%;
   padding: 0 14px;
   cursor: pointer;
+}
+@media (max-width: 1024.98px) {
+  .recommend .recommend-inner .recommend-list .recommend-item {
+    width: inherit;
+  }
+  .recommend .recommend-inner .recommend-list .recommend-item:last-of-type {
+    display: none;
+  }
 }
 .recommend .recommend-inner .recommend-list .recommend-item .recommend-thumb {
   position: relative;
@@ -1421,9 +1435,14 @@ body::-webkit-scrollbar {
   color: #c273ed;
 }
 .playlist .carousel-wrapper {
-  min-width: 1146.8px;
   display: flex;
   margin: 0 -14px;
+}
+@media (max-width: 1024.98px) {
+  .playlist .carousel-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 .playlist .carousel-wrapper .carousel-item {
   padding: 0px 14px;
@@ -1553,6 +1572,14 @@ body::-webkit-scrollbar {
 }
 .playlist .carousel-wrapper .carousel-item {
   width: 20%;
+}
+@media (max-width: 1024.98px) {
+  .playlist .carousel-wrapper .carousel-item {
+    width: inherit;
+  }
+  .playlist .carousel-wrapper .carousel-item:last-of-type {
+    display: none;
+  }
 }
 
 .partner {
