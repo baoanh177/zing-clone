@@ -4,10 +4,17 @@
         @include section-title;
     }
     .carousel-wrapper {
-        min-width: 1146.8px;
-        @include carousel-item;
+        grid-template-columns: repeat(5, 1fr);
+        @include responsive(laptop-sm) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+        @include playlist-card;
         .carousel-item {
-            width: 20%;
+            @include responsive(laptop-sm) {
+                &:last-of-type {
+                    display: none;
+                }
+            }
         }
     }
 }

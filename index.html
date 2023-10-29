@@ -6,9 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Zing MP3</title>
 
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="https://static-zmp3.zmdcdn.me/skins/zmp3-v5.2/images/icon_zing_mp3_60.png" type="image/x-icon">
-
     <!-- Font-Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
@@ -77,8 +74,7 @@
                 <div class="sidebar-inner">
                     <div class="sidebar-item">
                         <div class="zing-logo">
-                            <img src="./assets/icon/logo-dark.svg" class="logo" alt="" />
-                            <img src="https://zjs.zmdcdn.me/zmp3-desktop/releases/v1.9.85/static/media/icon_zing_mp3_60.f6b51045.svg" class="logo-sm" alt="" />
+                            <img src="./assets/icon/logo-dark.svg" alt="" />
                         </div>
                     </div>
                     <nav class="navbar-main">
@@ -301,14 +297,9 @@
                             </nav>
                         </div>
                     </nav>
-                    <div class="create-playlist-btn ">
+                    <div class="create-playlist-btn">
                         <i class="fa-solid fa-plus"></i>
                         <span>Tạo playlist mới</span>
-                    </div>
-                    <div class="sidebar-toggle-wrap">
-                        <div class="sidebar-toggle">
-                            <i class="fa-solid fa-chevron-right"></i>
-                        </div>
                     </div>
                 </div>
             </aside>
@@ -507,7 +498,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <span><a href="#!">Hỏi Thăm Nhau</a></span>
+                            <span class="carousel-title"><a href="#!">Hỏi Thăm Nhau</a></span>
                         </div>
                         <div class="carousel-item">
                             <div class="card-item">
@@ -530,7 +521,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <span><a href="#!">đã từng xem nhau là tất cả</a></span>
+                            <span class="carousel-title"><a href="#!">đã từng xem nhau là tất cả</a></span>
                         </div>
                         <div class="carousel-item">
                             <div class="card-item">
@@ -553,7 +544,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <span><a href="#!">#zingchart</a></span>
+                            <span class="carousel-title"><a href="#!">#zingchart</a></span>
                         </div>
                         <div class="carousel-item">
                             <div class="card-item">
@@ -576,7 +567,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <span><a href="#!">Rap Việt</a></span>
+                            <span class="carousel-title"><a href="#!">Rap Việt</a></span>
                         </div>
                         <div class="carousel-item">
                             <div class="card-item">
@@ -599,7 +590,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <span><a href="#!">Lofi Hits</a></span>
+                            <span class="carousel-title"><a href="#!">Lofi Hits</a></span>
                         </div>
                     </div>
                 </section>
@@ -611,29 +602,31 @@
                         <h3 class="title">Có thể bạn muốn nghe</h3>
                         <div class="recommend-list">
                             <div class="recommend-item">
-                                <div class="recommend-thumb">
-                                    <div class="recommend-image">
-                                        <img src="./assets/images/Có thể bạn muốn nghe/pianoVpop.jpg" alt="image 1" />
+                                <div class="card-item">
+                                    <div class="img">
+                                        <img width="100%" height="100%"
+                                            src="https://photo-resize-zmp3.zmdcdn.me/w320_r1x1_jpeg/cover/4/0/0/e/400e09fed8baf1acdecd89d9443e39ef.jpg"
+                                            alt="" />
                                     </div>
-                                    <div class="icon-list">
-                                        <div class="add-library">
+                                    <div class="actions-container">
+                                        <div class="carousel-icon">
                                             <i class="fa-regular fa-heart"></i>
                                             <div class="tool-tip">
                                                 Thêm vào thư viện
                                             </div>
                                         </div>
-                                        <div class="play-music">
+                                        <div class="play-video">
                                             <i class="fa-solid fa-play"></i>
                                         </div>
-                                        <div class="more">
+                                        <div class="carousel-icon">
                                             <i class="fa-solid fa-ellipsis"></i>
                                             <div class="tool-tip">Khác</div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="recommend-info">
-                                    <h4><a href="">Piano V-Pop</a></h4>
-                                    <h4>
+                                    <h4 class="recommend-title"><a href="">Piano V-Pop</a></h4>
+                                    <h4 class="author">
                                         <a href="">Ly Ly</a>,
                                         <a href="">Vương Anh Tú</a>,
                                         <a href="">Thùy Chi</a>...
@@ -641,32 +634,33 @@
                                 </div>
                             </div>
                             <div class="recommend-item">
-                                <div class="recommend-thumb">
-                                    <div class="recommend-image">
-                                        <img src="./assets/images/Có thể bạn muốn nghe/hit ngủ quên.jpg"
-                                            alt="image 1" />
+                                <div class="card-item">
+                                    <div class="img">
+                                        <img width="100%" height="100%"
+                                            src="https://photo-resize-zmp3.zmdcdn.me/w320_r1x1_jpeg/cover/9/0/a/a/90aaf76ec66bed90edc006c899415054.jpg"
+                                            alt="" />
                                     </div>
-                                    <div class="icon-list">
-                                        <div class="add-library">
+                                    <div class="actions-container">
+                                        <div class="carousel-icon">
                                             <i class="fa-regular fa-heart"></i>
                                             <div class="tool-tip">
                                                 Thêm vào thư viện
                                             </div>
                                         </div>
-                                        <div class="play-music">
+                                        <div class="play-video">
                                             <i class="fa-solid fa-play"></i>
                                         </div>
-                                        <div class="more">
+                                        <div class="carousel-icon">
                                             <i class="fa-solid fa-ellipsis"></i>
                                             <div class="tool-tip">Khác</div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="recommend-info">
-                                    <h4>
+                                    <h4 class="recommend-title">
                                         <a href="">Những bản hit ngủ quên</a>
                                     </h4>
-                                    <h4>
+                                    <h4 class="author">
                                         <a href="">Mr.Siro</a>,
                                         <a href="">Anh Tú</a>,
                                         <a href="">Chi Pu</a>...
@@ -674,32 +668,33 @@
                                 </div>
                             </div>
                             <div class="recommend-item">
-                                <div class="recommend-thumb">
-                                    <div class="recommend-image">
-                                        <img src="./assets/images/Có thể bạn muốn nghe/nhạc hoa lời việt.jpg"
-                                            alt="image 1" />
+                                <div class="card-item">
+                                    <div class="img">
+                                        <img width="100%" height="100%"
+                                            src="https://photo-resize-zmp3.zmdcdn.me/w320_r1x1_jpeg/cover/3/1/4/0/314082715346e94d00ea4e3da11b99ea.jpg"
+                                            alt="" />
                                     </div>
-                                    <div class="icon-list">
-                                        <div class="add-library">
+                                    <div class="actions-container">
+                                        <div class="carousel-icon">
                                             <i class="fa-regular fa-heart"></i>
                                             <div class="tool-tip">
                                                 Thêm vào thư viện
                                             </div>
                                         </div>
-                                        <div class="play-music">
+                                        <div class="play-video">
                                             <i class="fa-solid fa-play"></i>
                                         </div>
-                                        <div class="more">
+                                        <div class="carousel-icon">
                                             <i class="fa-solid fa-ellipsis"></i>
                                             <div class="tool-tip">Khác</div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="recommend-info">
-                                    <h4>
+                                    <h4 class="recommend-title">
                                         <a href="">Nhạc hoa lời việt mới nhất</a>
                                     </h4>
-                                    <h4>
+                                    <h4 class="author">
                                         <a href="">DICKSON</a>,
                                         <a href="">Tuệ Phương</a>,
                                         <a href="">Châu Dương</a>...
@@ -707,29 +702,31 @@
                                 </div>
                             </div>
                             <div class="recommend-item">
-                                <div class="recommend-thumb">
-                                    <div class="recommend-image">
-                                        <img src="./assets/images/Có thể bạn muốn nghe/nhạc phim.jpg" alt="image 1" />
+                                <div class="card-item">
+                                    <div class="img">
+                                        <img width="100%" height="100%"
+                                            src="https://photo-resize-zmp3.zmdcdn.me/w320_r1x1_jpeg/cover/2/0/4/2/2042591bddbdf044f2f681b4f8d492a8.jpg"
+                                            alt="" />
                                     </div>
-                                    <div class="icon-list">
-                                        <div class="add-library">
+                                    <div class="actions-container">
+                                        <div class="carousel-icon">
                                             <i class="fa-regular fa-heart"></i>
                                             <div class="tool-tip">
                                                 Thêm vào thư viện
                                             </div>
                                         </div>
-                                        <div class="play-music">
+                                        <div class="play-video">
                                             <i class="fa-solid fa-play"></i>
                                         </div>
-                                        <div class="more">
+                                        <div class="carousel-icon">
                                             <i class="fa-solid fa-ellipsis"></i>
                                             <div class="tool-tip">Khác</div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="recommend-info">
-                                    <h4><a href="">Nhạc phim Việt</a></h4>
-                                    <h4>
+                                    <h4 class="recommend-title"><a href="">Nhạc phim Việt</a></h4>
+                                    <h4 class="author">
                                         <a href="">Phan Mạnh Quỳnh</a>,
                                         <a href="">Vương Anh Tú</a>,
                                         <a href="">Ali Hoàng Dương</a>...
@@ -737,31 +734,33 @@
                                 </div>
                             </div>
                             <div class="recommend-item">
-                                <div class="recommend-thumb">
-                                    <div class="recommend-image">
-                                        <img src="./assets/images/Có thể bạn muốn nghe/remake Việt.jpg" alt="image 1" />
+                                <div class="card-item">
+                                    <div class="img">
+                                        <img width="100%" height="100%"
+                                            src="https://photo-resize-zmp3.zmdcdn.me/w320_r1x1_jpeg/cover/f/a/f/8/faf8935387e4d248e287ba7a21c8eb01.jpg"
+                                            alt="" />
                                     </div>
-                                    <div class="icon-list">
-                                        <div class="add-library">
+                                    <div class="actions-container">
+                                        <div class="carousel-icon">
                                             <i class="fa-regular fa-heart"></i>
                                             <div class="tool-tip">
                                                 Thêm vào thư viện
                                             </div>
                                         </div>
-                                        <div class="play-music">
+                                        <div class="play-video">
                                             <i class="fa-solid fa-play"></i>
                                         </div>
-                                        <div class="more">
+                                        <div class="carousel-icon">
                                             <i class="fa-solid fa-ellipsis"></i>
                                             <div class="tool-tip">Khác</div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="recommend-info">
-                                    <h4>
+                                    <h4 class="recommend-title">
                                         <a href="">Những bản remake hay nhất</a>
                                     </h4>
-                                    <h4>
+                                    <h4 class="author">
                                         <a href="">Tăng Duy Tân</a>,
                                         <a href="">Vương Anh Tú</a>,
                                         <a href="">Jack</a>...
@@ -867,7 +866,8 @@
                         <div class="carousel-item">
                             <div class="card-item">
                                 <div class="img">
-                                    <img width="100%" height="100%" src="./assets/images/playlist/playlist-1.jpg"
+                                    <img width="100%" height="100%"
+                                        src="https://photo-resize-zmp3.zmdcdn.me/w320_r1x1_jpeg/cover/7/0/0/7/7007a7517fc8b47eed3d49080192ec19.jpg"
                                         alt="" />
                                 </div>
                                 <div class="actions-container">
@@ -1302,10 +1302,12 @@
                         <div class="inner">
                             <div class="item">
                                 <div class="thumb">
-                                    <img src="./assets/images/newSongRank/Mây.jpg" alt="" />
-                                    <div class="icon-list">
-                                        <div class="play-icon">
-                                            <i class="fa-solid fa-play"></i>
+                                    <div class="image">
+                                        <img src="./assets/images/newSongRank/Mây.jpg" alt="" />
+                                        <div class="icon-list">
+                                            <div class="play-icon">
+                                                <i class="fa-solid fa-play"></i>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -1322,10 +1324,12 @@
                             </div>
                             <div class="item">
                                 <div class="thumb">
-                                    <img src="./assets/images/newSongRank/Mây.jpg" alt="" />
-                                    <div class="icon-list">
-                                        <div class="play-icon">
-                                            <i class="fa-solid fa-play"></i>
+                                    <div class="image">
+                                        <img src="./assets/images/newSongRank/Mây.jpg" alt="" />
+                                        <div class="icon-list">
+                                            <div class="play-icon">
+                                                <i class="fa-solid fa-play"></i>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -1342,10 +1346,12 @@
                             </div>
                             <div class="item">
                                 <div class="thumb">
-                                    <img src="./assets/images/newSongRank/Mây.jpg" alt="" />
-                                    <div class="icon-list">
-                                        <div class="play-icon">
-                                            <i class="fa-solid fa-play"></i>
+                                    <div class="image">
+                                        <img src="./assets/images/newSongRank/Mây.jpg" alt="" />
+                                        <div class="icon-list">
+                                            <div class="play-icon">
+                                                <i class="fa-solid fa-play"></i>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -1470,12 +1476,14 @@
                         </li>
                         <li class="item">
                             <a href="">
-                                <img src="https://zmp3-static.zmdcdn.me/skins/zmp3-v5.2/images/web_song_usuk.jpg" alt="">
+                                <img src="https://zmp3-static.zmdcdn.me/skins/zmp3-v5.2/images/web_song_usuk.jpg"
+                                    alt="">
                             </a>
                         </li>
                         <li class="item">
                             <a href="">
-                                <img src="https://zmp3-static.zmdcdn.me/skins/zmp3-v5.2/images/web_song_kpop.jpg" alt="">
+                                <img src="https://zmp3-static.zmdcdn.me/skins/zmp3-v5.2/images/web_song_kpop.jpg"
+                                    alt="">
                             </a>
                         </li>
                     </ul>
