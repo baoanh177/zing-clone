@@ -980,9 +980,9 @@ body::-webkit-scrollbar {
   color: #c273ed;
 }
 .recently .carousel-wrapper {
-  min-width: 1146.8px;
-  display: flex;
+  display: grid;
   margin: 0 -14px;
+  grid-template-columns: repeat(5, 1fr);
 }
 .recently .carousel-wrapper .carousel-item {
   padding: 0px 14px;
@@ -990,15 +990,18 @@ body::-webkit-scrollbar {
 .recently .carousel-wrapper .carousel-item .card-item {
   cursor: pointer;
   position: relative;
-  width: 100%;
+  padding-bottom: 100%;
+  background-color: lightblue;
+  border-radius: 5px;
 }
 .recently .carousel-wrapper .carousel-item .card-item .img {
   border-radius: 5px;
-  width: 100%;
+  position: absolute;
   overflow: hidden;
+  inset: 0;
 }
 .recently .carousel-wrapper .carousel-item .card-item .img img {
-  transition: transform 0.7s linear;
+  transition: transform 0.7s;
 }
 .recently .carousel-wrapper .carousel-item .card-item .actions-container {
   display: flex;
@@ -1101,6 +1104,12 @@ body::-webkit-scrollbar {
   color: #c273ed;
 }
 .recently .carousel-wrapper .carousel-item p.desc {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* number of lines to show */
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
   margin-top: 12px;
   font-weight: 400;
   line-height: 1.3;
@@ -1109,6 +1118,24 @@ body::-webkit-scrollbar {
 }
 .recently .carousel-wrapper .carousel-item p.desc:hover {
   color: #c273ed;
+}
+@media (max-width: 1024.98px) {
+  .recently .carousel-wrapper {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (max-width: 1024.98px) {
+  .recently .carousel-wrapper .carousel-item:last-of-type {
+    display: none;
+  }
+}
+.recently .carousel-wrapper .carousel-item .carousel-title a {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* number of lines to show */
+  line-clamp: 1;
+  -webkit-box-orient: vertical;
 }
 
 .recommend {
@@ -1120,75 +1147,71 @@ body::-webkit-scrollbar {
   font-weight: 700;
 }
 .recommend .recommend-inner .recommend-list {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
   margin: 20px -14px 0;
 }
 @media (max-width: 1024.98px) {
   .recommend .recommend-inner .recommend-list {
-    display: grid;
     grid-template-columns: repeat(4, 1fr);
   }
 }
 .recommend .recommend-inner .recommend-list .recommend-item {
-  width: 20%;
   padding: 0 14px;
   cursor: pointer;
 }
 @media (max-width: 1024.98px) {
-  .recommend .recommend-inner .recommend-list .recommend-item {
-    width: inherit;
-  }
   .recommend .recommend-inner .recommend-list .recommend-item:last-of-type {
     display: none;
   }
 }
-.recommend .recommend-inner .recommend-list .recommend-item .recommend-thumb {
+.recommend .recommend-inner .recommend-list .recommend-item .card-item {
+  cursor: pointer;
   position: relative;
+  padding-bottom: 100%;
+  background-color: lightblue;
+  border-radius: 5px;
 }
-.recommend .recommend-inner .recommend-list .recommend-item .recommend-thumb:hover img {
-  transform: scale(1.1);
-}
-.recommend .recommend-inner .recommend-list .recommend-item .recommend-thumb:hover .icon-list {
-  opacity: 1;
-  visibility: visible;
-}
-.recommend .recommend-inner .recommend-list .recommend-item .recommend-thumb .recommend-image {
-  position: relative;
-  overflow: hidden;
-  border-radius: 6px;
-}
-.recommend .recommend-inner .recommend-list .recommend-item .recommend-thumb .recommend-image img {
-  width: 100%;
-  transition: transform 0.7s ease;
-}
-.recommend .recommend-inner .recommend-list .recommend-item .recommend-thumb .icon-list {
+.recommend .recommend-inner .recommend-list .recommend-item .card-item .img {
+  border-radius: 5px;
   position: absolute;
+  overflow: hidden;
+  inset: 0;
+}
+.recommend .recommend-inner .recommend-list .recommend-item .card-item .img img {
+  transition: transform 0.7s;
+}
+.recommend .recommend-inner .recommend-list .recommend-item .card-item .actions-container {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  opacity: 0;
+  width: 100%;
   visibility: hidden;
+  opacity: 0;
+  gap: 5px;
+  position: absolute;
   inset: 0;
-  font-size: 18px;
-  background-color: rgba(0, 0, 0, 0.3411764706);
+  background-color: rgba(0, 0, 0, 0.5);
+  transition-property: visibility, opacity;
+  transition: 0.1s linear;
 }
-.recommend .recommend-inner .recommend-list .recommend-item .recommend-thumb .icon-list .add-library,
-.recommend .recommend-inner .recommend-list .recommend-item .recommend-thumb .icon-list .more {
+.recommend .recommend-inner .recommend-list .recommend-item .card-item .actions-container .carousel-icon {
   position: relative;
-  padding: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
 }
-.recommend .recommend-inner .recommend-list .recommend-item .recommend-thumb .icon-list .add-library:hover,
-.recommend .recommend-inner .recommend-list .recommend-item .recommend-thumb .icon-list .more:hover {
+.recommend .recommend-inner .recommend-list .recommend-item .card-item .actions-container .carousel-icon:hover {
   background-color: rgba(255, 255, 255, 0.231372549);
 }
-.recommend .recommend-inner .recommend-list .recommend-item .recommend-thumb .icon-list .add-library:hover .tool-tip,
-.recommend .recommend-inner .recommend-list .recommend-item .recommend-thumb .icon-list .more:hover .tool-tip {
+.recommend .recommend-inner .recommend-list .recommend-item .card-item .actions-container .carousel-icon:hover .tool-tip {
   opacity: 1;
   visibility: visible;
 }
-.recommend .recommend-inner .recommend-list .recommend-item .recommend-thumb .icon-list .add-library .tool-tip,
-.recommend .recommend-inner .recommend-list .recommend-item .recommend-thumb .icon-list .more .tool-tip {
+.recommend .recommend-inner .recommend-list .recommend-item .card-item .actions-container .carousel-icon .tool-tip {
   position: absolute;
   text-align: center;
   font-size: 12px;
@@ -1205,8 +1228,7 @@ body::-webkit-scrollbar {
   background-color: #32323d;
   white-space: nowrap;
 }
-.recommend .recommend-inner .recommend-list .recommend-item .recommend-thumb .icon-list .add-library .tool-tip::before,
-.recommend .recommend-inner .recommend-list .recommend-item .recommend-thumb .icon-list .more .tool-tip::before {
+.recommend .recommend-inner .recommend-list .recommend-item .card-item .actions-container .carousel-icon .tool-tip::before {
   content: "";
   position: absolute;
   top: 100%;
@@ -1216,7 +1238,7 @@ body::-webkit-scrollbar {
   border-width: 8px 8px;
   border-color: #32323d transparent transparent;
 }
-.recommend .recommend-inner .recommend-list .recommend-item .recommend-thumb .icon-list .play-music {
+.recommend .recommend-inner .recommend-list .recommend-item .card-item .actions-container .play-video {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1226,12 +1248,25 @@ body::-webkit-scrollbar {
   border-radius: 50%;
   border: 1px solid #fff;
 }
-.recommend .recommend-inner .recommend-list .recommend-item .recommend-thumb .icon-list .play-music i {
+.recommend .recommend-inner .recommend-list .recommend-item .card-item .actions-container .play-video i {
   font-size: 20px;
   margin-left: 2px;
 }
-.recommend .recommend-inner .recommend-list .recommend-item .recommend-thumb .icon-list .play-music:hover {
+.recommend .recommend-inner .recommend-list .recommend-item .card-item .actions-container .play-video:hover {
   filter: brightness(0.9);
+}
+.recommend .recommend-inner .recommend-list .recommend-item .card-item .actions-container i {
+  color: #fff;
+  font-size: 20px;
+  margin: 0px 2px;
+  padding: 5px;
+}
+.recommend .recommend-inner .recommend-list .recommend-item .card-item:hover img {
+  transform: scale(1.1);
+}
+.recommend .recommend-inner .recommend-list .recommend-item .card-item:hover .actions-container {
+  visibility: visible;
+  opacity: 1;
 }
 .recommend .recommend-inner .recommend-list .recommend-info {
   margin-top: 12px;
@@ -1241,18 +1276,27 @@ body::-webkit-scrollbar {
   margin-bottom: 4px;
   font-weight: 500;
   text-transform: capitalize;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* number of lines to show */
+  line-clamp: 1;
+  -webkit-box-orient: vertical;
 }
-.recommend .recommend-inner .recommend-list .recommend-info h4 a:hover {
-  color: #c273ed;
-}
-.recommend .recommend-inner .recommend-list .recommend-info :nth-of-type(2) {
+.recommend .recommend-inner .recommend-list .recommend-info h4.author {
   line-height: 1.33;
   color: hsla(0, 0%, 100%, 0.5);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* number of lines to show */
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
-.recommend .recommend-inner .recommend-list .recommend-info :nth-of-type(2) a {
+.recommend .recommend-inner .recommend-list .recommend-info h4.author a {
   font-weight: 400;
 }
-.recommend .recommend-inner .recommend-list .recommend-info :nth-of-type(2) a:hover {
+.recommend .recommend-inner .recommend-list .recommend-info h4.author a:hover {
   text-decoration: underline;
 }
 
@@ -1361,10 +1405,12 @@ body::-webkit-scrollbar {
   flex-grow: 1;
 }
 .new-release .list-music .music-item .info .music-title {
-  white-space: nowrap;
-  text-overflow: ellipsis;
   overflow: hidden;
-  max-width: 100%;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* number of lines to show */
+  line-clamp: 1;
+  -webkit-box-orient: vertical;
   font-size: 1.4rem;
   font-weight: 500;
   line-height: 1.3;
@@ -1374,10 +1420,12 @@ body::-webkit-scrollbar {
   text-decoration: underline;
 }
 .new-release .list-music .music-item .info .author-name, .new-release .list-music .music-item .info .release-time {
-  white-space: nowrap;
-  text-overflow: ellipsis;
   overflow: hidden;
-  max-width: 100%;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* number of lines to show */
+  line-clamp: 1;
+  -webkit-box-orient: vertical;
   margin-top: 3px;
   font-size: 1.2rem;
   line-height: 1.33;
@@ -1435,12 +1483,12 @@ body::-webkit-scrollbar {
   color: #c273ed;
 }
 .playlist .carousel-wrapper {
-  display: flex;
+  grid-template-columns: repeat(5, 1fr);
+  display: grid;
   margin: 0 -14px;
 }
 @media (max-width: 1024.98px) {
   .playlist .carousel-wrapper {
-    display: grid;
     grid-template-columns: repeat(4, 1fr);
   }
 }
@@ -1450,15 +1498,18 @@ body::-webkit-scrollbar {
 .playlist .carousel-wrapper .carousel-item .card-item {
   cursor: pointer;
   position: relative;
-  width: 100%;
+  padding-bottom: 100%;
+  background-color: lightblue;
+  border-radius: 5px;
 }
 .playlist .carousel-wrapper .carousel-item .card-item .img {
   border-radius: 5px;
-  width: 100%;
+  position: absolute;
   overflow: hidden;
+  inset: 0;
 }
 .playlist .carousel-wrapper .carousel-item .card-item .img img {
-  transition: transform 0.7s linear;
+  transition: transform 0.7s;
 }
 .playlist .carousel-wrapper .carousel-item .card-item .actions-container {
   display: flex;
@@ -1561,6 +1612,12 @@ body::-webkit-scrollbar {
   color: #c273ed;
 }
 .playlist .carousel-wrapper .carousel-item p.desc {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* number of lines to show */
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
   margin-top: 12px;
   font-weight: 400;
   line-height: 1.3;
@@ -1570,13 +1627,7 @@ body::-webkit-scrollbar {
 .playlist .carousel-wrapper .carousel-item p.desc:hover {
   color: #c273ed;
 }
-.playlist .carousel-wrapper .carousel-item {
-  width: 20%;
-}
 @media (max-width: 1024.98px) {
-  .playlist .carousel-wrapper .carousel-item {
-    width: inherit;
-  }
   .playlist .carousel-wrapper .carousel-item:last-of-type {
     display: none;
   }
@@ -1781,10 +1832,12 @@ body::-webkit-scrollbar {
   transition: opacity 0.2s, visibility 0.2s;
 }
 .zingchart .song-item .song .info .song-name {
-  white-space: nowrap;
-  text-overflow: ellipsis;
   overflow: hidden;
-  max-width: 100%;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* number of lines to show */
+  line-clamp: 1;
+  -webkit-box-orient: vertical;
   line-height: 1.3;
   font-size: 1.4rem;
   font-weight: 500;

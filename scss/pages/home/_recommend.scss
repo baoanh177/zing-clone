@@ -7,71 +7,22 @@
             font-weight: 700;
         }
         .recommend-list {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            margin: 20px -14px 0;
             @include responsive(laptop-sm) {
-                display: grid;
                 grid-template-columns: repeat(4, 1fr);
             }
-            display: flex;
-            margin: 20px -14px 0;
             .recommend-item {
                 @include responsive(laptop-sm) {
-                    width: inherit;
                     &:last-of-type {
                         display: none;
                     }
                 }
-                width: 20%;
                 padding: 0 14px;
                 cursor: pointer;
-                .recommend-thumb {
-                    position: relative;
-                    &:hover {
-                        img {
-                            transform: scale(1.1);
-                        }
-                        .icon-list {
-                            opacity: 1;
-                            visibility: visible;
-                        }
-                    }
-                    .recommend-image {
-                        position: relative;
-                        overflow: hidden;
-                        border-radius: 6px;
-                        img {
-                            width: 100%;
-                            transition: transform 0.7s ease;
-                        }
-                    }
-                    .icon-list {
-                        position: absolute;
-                        @include center(cross);
-                        justify-content: space-evenly;
-                        opacity: 0;
-                        visibility: hidden;
-                        inset: 0;
-                        font-size: 18px;
-                        background-color: #00000057;
-                        .add-library,
-                        .more {
-                            position: relative;
-                            padding: 6px;
-                            border-radius: 50%;
-                            &:hover {
-                                background-color: #ffffff3b;
-                                .tool-tip {
-                                    opacity: 1;
-                                    visibility: visible;
-                                }
-                            }
-                            .tool-tip {
-                                @include tool-tip();
-                            }
-                        }
-                        .play-music {
-                            @include play-icon(secondary);
-                        }
-                    }
+                .card-item {
+                    @include carousel-thumb();
                 }
             }
             .recommend-info {
@@ -81,22 +32,20 @@
                     margin-bottom: 4px;
                     font-weight: 500;
                     text-transform: capitalize;
-                    a {
-                        &:hover {
-                            color: $link-text-hover;
+                    @include ellipsis-overflow();
+                    &.author {
+                        line-height: 1.33;
+                        color: $text-secondary;
+                        a {
+                            font-weight: 400;
+                            &:hover {
+                                text-decoration: underline;
+                            }
                         }
+                        @include ellipsis-overflow(2)
                     }
                 }
-                :nth-of-type(2) {
-                    line-height: 1.33;
-                    color: $text-secondary;
-                    a {
-                        font-weight: 400;
-                        &:hover {
-                            text-decoration: underline;
-                        }
-                    }
-                }
+                
             }
         }
     }

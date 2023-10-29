@@ -49,11 +49,13 @@
 }
 
 // ellipsis overflow
-@mixin ellipsis-overflow() {
-    white-space: nowrap;
-    text-overflow: ellipsis;
+@mixin ellipsis-overflow($line: 1) {
     overflow: hidden;
-    max-width: 100%;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   -webkit-line-clamp: $line; /* number of lines to show */
+           line-clamp: $line;
+   -webkit-box-orient: vertical;
 }
 
 @mixin section-title {
@@ -85,75 +87,80 @@
     }
 }
 
-@mixin playlist-item {
-    .card-item {
-        cursor: pointer;
-        position: relative;
+// Carousel thumb
+@mixin carousel-thumb {
+    cursor: pointer;
+    position: relative;
+    padding-bottom: 100%;
+    background-color: lightblue;
+    border-radius: 5px;
+    .img {
+        border-radius: 5px;
+        position: absolute;
+        overflow: hidden;
+        inset: 0;
+        img {
+            transition: transform 0.7s;
+        }
+    }
+    .actions-container {
+        @include center(cross);
+        justify-content: space-evenly;
         width: 100%;
-        .img {
-            border-radius: 5px;
-            width: 100%;
-            overflow: hidden;
-            img {
-                transition: transform 0.7s linear;
+        visibility: hidden;
+        opacity: 0;
+        gap: 5px;
+        position: absolute;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        transition-property: visibility, opacity;
+        transition: 0.1s linear;
+        .carousel-icon {
+            position: relative;
+            @include center(all);
+            @include equal-sides(30px);
+            border-radius: 50%;
+            &:hover {
+                background-color: #ffffff3b;
+                .tool-tip {
+                    opacity: 1;
+                    visibility: visible;
+                }
             }
+            .tool-tip {
+                @include tool-tip();
+            }
+        }
+        .play-video {
+            @include play-icon(secondary);
+        }
+        i {
+            color: #fff;
+            font-size: 20px;
+            margin: 0px 2px;
+            padding: 5px;
+        }
+    }
+    &:hover {
+        img {
+            transform: scale(1.1);
         }
         .actions-container {
-            @include center(cross);
-            justify-content: space-evenly;
-            width: 100%;
-            visibility: hidden;
-            opacity: 0;
-            gap: 5px;
-            position: absolute;
-            inset: 0;
-            background-color: rgba(0, 0, 0, 0.5);
-            transition-property: visibility, opacity;
-            transition: 0.1s linear;
-            .carousel-icon {
-                position: relative;
-                @include center(all);
-                @include equal-sides(30px);
-                border-radius: 50%;
-                &:hover {
-                    background-color: #ffffff3b;
-                    .tool-tip {
-                        opacity: 1;
-                        visibility: visible;
-                    }
-                }
-                .tool-tip {
-                    @include tool-tip();
-                }
-            }
-            .play-video {
-                @include play-icon(secondary);
-            }
-            i {
-                color: #fff;
-                font-size: 20px;
-                margin: 0px 2px;
-                padding: 5px;
-            }
-        }
-        &:hover {
-            img {
-                transform: scale(1.1);
-            }
-            .actions-container {
-                visibility: visible;
-                opacity: 1;
-            }
+            visibility: visible;
+            opacity: 1;
         }
     }
 }
 
-@mixin carousel-item {
-    display: flex;
+// Playlist card
+@mixin playlist-card {
+    display: grid;
     margin: 0 -14px;
     .carousel-item {
         padding: 0px 14px;
-        @include playlist-item();
+        .card-item {
+            @include carousel-thumb();
+        }
         span {
             display: inline-block;
             margin-top: 12px;
@@ -169,6 +176,7 @@
         }
         p {
             &.desc {
+                @include ellipsis-overflow(2);
                 margin-top: 12px;
                 font-weight: 400;
                 line-height: 1.3;

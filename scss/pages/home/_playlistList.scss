@@ -4,19 +4,17 @@
         @include section-title;
     }
     .carousel-wrapper {
+        grid-template-columns: repeat(5, 1fr);
         @include responsive(laptop-sm) {
-            display: grid;
             grid-template-columns: repeat(4, 1fr);
         }
-        @include carousel-item;
+        @include playlist-card;
         .carousel-item {
             @include responsive(laptop-sm) {
-                width: inherit;
                 &:last-of-type {
                     display: none;
                 }
             }
-            width: 20%;
         }
     }
 }
