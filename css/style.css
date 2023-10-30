@@ -1727,33 +1727,34 @@ body::-webkit-scrollbar {
   position: relative;
   inset: 0;
   margin-bottom: 20px;
-}
-.zingchart .content .inner {
-  display: flex;
   padding: 20px;
 }
-.zingchart .content .inner .song-rank {
-  width: 42.6%;
-}
-.zingchart .content .inner .song-rank .heading {
+.zingchart .content .heading {
   display: flex;
   align-items: center;
   gap: 10px;
   font-size: 2.8rem;
   font-weight: 700;
   color: #fff;
+  margin-bottom: 20px;
 }
-.zingchart .content .inner .song-rank .heading .play-icon {
+.zingchart .content .heading .play-icon {
   font-size: 2.3rem;
 }
-.zingchart .content .inner .song-rank .heading .title {
+.zingchart .content .heading .title {
   background: radial-gradient(50% 124.93% at 95.86% -10%, #3efad9 0, hsla(0, 0%, 100%, 0) 100%), linear-gradient(91.56deg, #ff9357 1.54%, #9100ff 98.71%);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
 }
+.zingchart .content .inner {
+  display: flex;
+  align-items: center;
+}
+.zingchart .content .inner .song-rank {
+  width: 42.6%;
+}
 .zingchart .content .inner .song-rank .rank-list {
-  margin-top: 20px;
   padding: 0 14px;
 }
 .zingchart .content .inner .song-rank .btn-wrapper {
@@ -1767,6 +1768,12 @@ body::-webkit-scrollbar {
   border: 1px solid #fff;
   border-radius: 999px;
   background-color: transparent;
+}
+.zingchart .content .inner .chart {
+  flex-grow: 1;
+  height: 300px;
+  background-color: rgba(255, 170, 221, 0.062745098);
+  border-radius: 12px;
 }
 .zingchart .song-item {
   display: flex;
@@ -1809,17 +1816,21 @@ body::-webkit-scrollbar {
   margin-left: 15px;
 }
 .zingchart .song-item .song .thumb {
+  max-width: 60px;
+  width: 100%;
   position: relative;
-  width: 60px;
-  height: 60px;
   border-radius: 4px;
   overflow: hidden;
 }
-.zingchart .song-item .song .thumb img {
+.zingchart .song-item .song .thumb .thumb-inner {
   width: 100%;
-  height: 100%;
+  padding-bottom: 100%;
 }
-.zingchart .song-item .song .thumb .play-icon {
+.zingchart .song-item .song .thumb .thumb-inner img {
+  position: absolute;
+  inset: 0;
+}
+.zingchart .song-item .song .thumb .thumb-inner .play-icon {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1845,18 +1856,34 @@ body::-webkit-scrollbar {
 .zingchart .song-item .song .info .author {
   font-size: 1.2rem;
   color: hsla(0, 0%, 100%, 0.5);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* number of lines to show */
+  line-clamp: 1;
+  -webkit-box-orient: vertical;
 }
 .zingchart .song-item .song .info .author a:hover {
   color: #c273ed;
   text-decoration: underline;
 }
-.zingchart .song-item .precent {
+.zingchart .song-item .percent {
   margin-left: 10px;
   font-weight: 700;
   font-size: 1.6rem;
   line-height: 1.56;
 }
 
+@media (max-width: 1024.98px) {
+  .zingchart .content .inner {
+    flex-direction: column-reverse;
+    align-items: normal;
+    row-gap: 20px;
+  }
+  .zingchart .content .inner .song-rank {
+    width: 100%;
+  }
+}
 .weekchart {
   margin-top: 28px;
   padding-top: 40px;
